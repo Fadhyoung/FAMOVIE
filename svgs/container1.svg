@@ -1,0 +1,7 @@
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="rounded-polygon-mask">
+      <path d="M0 0 L100% 0 L100% 75% Q 95% 75% 95% 80% L75% 100% Q 70% 100% 70% 95% L0 100% Z" />
+    </clipPath>
+  </defs>
+</svg>
