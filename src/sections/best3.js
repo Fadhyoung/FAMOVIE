@@ -7,39 +7,32 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 import Card1 from "@/components/Cards";
+import { all } from "axios";
 
 export default function Best3 () {
 
     const [data, setData] = useState([]); // Data for the current page
-    const [category, setCategory] = useState("Western")
-    const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(0);
-    const itemsPerPage = 3;
+    const [category, setCategory] = useState(["Western", "Asian", "Movies", "Indonesia"])
+    const [currentPage, setCurrentPage] = useState(0)
 
     const [isLoading, setIsLoading] = useState(false);
 
     // Function to fetch specific page data
-    const fetchPageData = async (page) => {
+    const fetchPageData = async () => {
+
         try {
-            const response = await fetch('/Best3.csv');
+            const response = await fetch('/FAMOVIE/Best3.csv');
             const csvText = await response.text();
 
             Papa.parse(csvText, {
                 header: true,
                 skipEmptyLines: true,
                 complete: async (result) => {
-                    const allData = result.data.filter(item => item.Category === category);
+                    const allData = result.data.filter(item => item.Category === category[currentPage]);
 
-                    // Calculate total pages
-                    const totalPagesCount = Math.ceil(allData.length / itemsPerPage);
-                    setTotalPages(totalPagesCount);
+                    console.log(allData)
 
-                    // Slice data for the requested page
-                    const startIndex = (page - 1) * itemsPerPage;
-                    const endIndex = startIndex + itemsPerPage;
-                    const pageData = allData.slice(startIndex, endIndex);
-
-                    const moviesWithImages = await fetchMovieImagesBatch(pageData); // Use the service
+                    const moviesWithImages = await fetchMovieImagesBatch(allData); // Use the service
                     setData(moviesWithImages);
                 },
             });
@@ -53,17 +46,19 @@ export default function Best3 () {
     // Fetch initial page data
     useEffect(() => {
         setIsLoading(true);
-        fetchPageData(currentPage);
+        fetchPageData(category[currentPage]);
         setIsLoading(false);
     }, [currentPage]);
 
     // Handle page change
     const handlePageChange = (page) => {
+        setIsLoading(true);
         if (page <= 0) {
-            setCurrentPage(1);
-        } else if (page >= (totalPages.length + 1)) {
-            setCurrentPage((totalPages.length + 1));
-        } else {setCurrentPage(page);}        
+            setCurrentPage(0);
+        } else if (page >= (category.length - 1)) {
+            setCurrentPage(category.length - 1);
+        } else {setCurrentPage(page);}   
+        setIsLoading(false);     
     };
 
     if (isLoading) {
@@ -84,8 +79,8 @@ export default function Best3 () {
             <div className="w-full flex gap-20 justify-between">
                 {/** 1ST */}
                 <div className="w-1/3 flex flex-col items-start gap-2">
-                    <button className="b3-button">Famovie imdb list <FaExternalLinkAlt /></button>
-                    <button className="b3-button">Letterbox <FaExternalLinkAlt /></button>
+                    <button className="b3-button" onClick={() => window.open("https://www.imdb.com/list/ls547498540/?ref_=ext_shr_lnk", "_blank")}>Famovie imdb list <FaExternalLinkAlt /></button>
+                    <button className="b3-button" onClick={() => window.open("https://www.imdb.com/list/ls547498540/?ref_=ext_shr_lnk", "_blank")}>Letterbox <FaExternalLinkAlt /></button>
                 </div>
                 {/** 2ND */}
                 <div className="w-1/3 text-center text-black">
@@ -98,22 +93,29 @@ export default function Best3 () {
                         <button className="b3-button" onClick={() => handlePageChange(currentPage - 1)}><FiChevronLeft /></button>
                         <button className="b3-button" onClick={() => handlePageChange(currentPage + 1)}><FiChevronRight /> </button>
                     </div>
-                    <button className="b3-button">#Western</button>
+                    <button className="b3-button">#{category[currentPage]}</button>
                 </div>
             </div>
             {/** MIDDLE SECTION */}
             <div className="w-full flex mt-10 gap-10 justify-between items-end">
                 {/** CARD */}
-                <Card1 width={"w-1/3"} height={"h-56"} data={data[0]}/>                    
-                <Card1 width={"w-1/3"} height={"h-80"} data={data[1]}/>
-                <Card1 width={"w-1/3"} height={"h-56"} data={data[2]}/>
+                {!isLoading ? (
+                    <>
+                    <Card1 width={"w-1/3"} height={"h-56"} data={data[0]} />
+                    <Card1 width={"w-1/3"} height={"h-56"} data={data[1]} />
+                    <Card1 width={"w-1/3"} height={"h-56"} data={data[2]} />
+                    </>
+                ) : (
+                    <p>Loading...</p> // or a skeleton loader component
+                )}
+
             </div>
             {/** BOTTOM SECTION */}
             <div className="flex gap-5">
-                <button className="b3-button" onClick={() => setCategory("Western")}> Western</button>
-                <button className="b3-button" onClick={() => setCategory("Asian")}> Asian</button>
-                <button className="b3-button" onClick={() => setCategory("Movies")}> Movies</button>
-                <button className="b3-button" onClick={() => setCategory("Indonesia")}> Indonesia</button>
+                <button className={`b3-button ${currentPage === 0 ? "bg-black text-white" : "bg-white"}`} onClick={() => setCurrentPage(0)}> Western</button>
+                <button className={`b3-button ${currentPage === 1 ? "bg-black text-white" : "bg-white"}`} onClick={() => setCurrentPage(1)}> Asian</button>
+                <button className={`b3-button ${currentPage === 2 ? "bg-black text-white" : "bg-white"}`} onClick={() => setCurrentPage(2)}> Movies</button>
+                <button className={`b3-button ${currentPage === 3 ? "bg-black text-white" : "bg-white"}`} onClick={() => setCurrentPage(3)}> Indonesia</button>
             </div>
         </div>
         </div>

@@ -1,7 +1,9 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 import { FaPlay } from "react-icons/fa6";
 
 const truncateDesc = (text, wordLimit) => {
+    if (text === undefined ) { text = "Undetected"} 
     const words = text.split(' ');
     return words.length > wordLimit 
         ? words.slice(0, wordLimit).join(' ') + '...' 
@@ -10,15 +12,29 @@ const truncateDesc = (text, wordLimit) => {
 
 // Used at the best 3 section
 export const Card1 = ({width, height, data = {}}) => {
+
     return (
         <>
-            <div className={`${width} ${height} flex flex-col overflow-hidden border rounded-[20px] border-black bg-white`}>
-                <div className="p-5 flex items-center justify-between">
-                    <h1 className="text-[24px] font-semibold">{data["Title"]}</h1>
-                    <FaExternalLinkAlt size={35} />
+            <div className={`${width} ${height} p-1 flex flex-row justify-between overflow-hidden border rounded-[20px] border-black bg-white`}>
+            <img className="basis-[30%] h-full object-cover rounded-[20px]" src={data["Poster"]}/>
+            <div className="basis-[60%] p-5 flex flex-col items-start justify-between">
+                <div className="w-full flex justify-between items-center">
+                    <div className="flex gap-2 items-start text-[20px] text-amber-300">
+                        <h2>{data["imdbRating"]}</h2>
+                        <FaStar size={25} />
+                    </div>
+                    <button onClick={() => window.open(data["URL"], "_blank")}><FaExternalLinkAlt size={25} /></button>
                 </div>
-                <p className="w-4/5 px-3 py-1 text-[16px] font-normal">{truncateDesc(data["Plot"], 5)}</p>
-                <img className="w-full h-full  object-cover" src={data["Poster"]}/>
+                
+                <div className="w-full flex flex-col">
+                    <h1 className="w-full text-[16px] font-semibold">{data["Title"]}</h1>
+                    <p className="w-full text-[14px] font-normal text-justify">{truncateDesc(data["Plot"], 15)}</p> 
+                </div>
+
+                <div className="w-full flex flex-nowrap overflow-hidden text-[12px] text-gray-400">
+                    {data["Genre"]}
+                </div>
+            </div>                               
             </div>
         </>
     )
@@ -26,13 +42,6 @@ export const Card1 = ({width, height, data = {}}) => {
 
 // Used at the top 10 recomendation
 export const Card2 = ({title, plot, img, url}) => {
-
-    const truncateDesc = (text, wordLimit) => {
-        const words = text.split(' ');
-        return words.length > wordLimit 
-            ? words.slice(0, wordLimit).join(' ') + '...' 
-            : text;
-    };
 
     return (
         <div className="basis-[18%] flex flex-col flex-shrink-0 text-black">
@@ -68,13 +77,6 @@ export const Card3 = ({}) => {
 
 //used at all ive watched
 export const Card4 = ({title, desc, poster}) => {
-
-    const truncateDesc = (text, wordLimit) => {
-        const words = text.split(' ');
-        return words.length > wordLimit 
-            ? words.slice(0, wordLimit).join(' ') + '...' 
-            : text;
-    };
 
     return (
         <div className="basis-[23.5%] h-[400px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">

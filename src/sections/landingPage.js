@@ -3,8 +3,6 @@ import { RiScrollToBottomLine } from "react-icons/ri";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Button1 from "@/components/Buttons";
 
-import "./landingPage.css"
-
 export default function LandingPage() {
     return (
         <>

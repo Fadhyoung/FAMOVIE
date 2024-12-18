@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import './test.css'
 
 import { Card2 } from "@/components/Cards";
 import Top10 from "@/sections/top10";
