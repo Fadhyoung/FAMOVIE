@@ -28,7 +28,7 @@ export const fetchMovieImage = async (id) => {
 export const fetchMovieImage2 = async (id) => {
     const options = {
         method: 'GET',
-        url: `http://www.omdbapi.com/?i=${id}&apikey=ff359f1e`,
+        url: `https://www.omdbapi.com/?i=${id}&apikey=ff359f1e`,
     };
 
     try {
