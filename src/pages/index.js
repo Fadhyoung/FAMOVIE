@@ -22,13 +22,13 @@ export default function Home() {
    <>
      <div className="lg:w-full xs:w-fit max-w-[1824px] m-auto grid grid-cols-1 gap-10 justify-center items-center bg-white">      
 
-      {/** <LandingPage /> */}
+      <LandingPage />
 
       <Best3 />
 
-      {/** <Top10 /> */}
+      <Top10 />
 
-      {/* <AllData width={"w-3/4"}  /> */}
+      <AllData width={"w-3/4"}  />
 
       {/** FOOTER */}
       <div className="w-full p-10 flex gap-20 justify-center items-center foreground2">

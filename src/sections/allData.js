@@ -19,7 +19,7 @@ export default function AllData({ width }) {
     // Function to fetch specific page data
     const fetchPageData = async (page) => {
         try {
-            const response = await fetch('/famovie_list.csv');
+            const response = await fetch('/FAMOVIE/famovie_list.csv');
             const csvText = await response.text();
 
             Papa.parse(csvText, {

@@ -10,12 +10,12 @@ export default function LandingPage() {
             
             {/** FLOAT ORNAMENT */}                
             <div className="m-auto absolute bottom-0 left-1/2 p-2 z-20 text-black transform -translate-x-1/2 -translate-y-24"><RiScrollToBottomLine size={40} className="animate-bounce" /></div>
-            <div className="w-52 pb-3 absolute bottom-0 left-1/2 p-2 z-30 text-black transform -translate-x-1/2"><img className="w-full object-cover" src={`/images/FullLogo.png`}/></div>
+            <div className="w-52 pb-3 absolute bottom-0 left-1/2 p-2 z-30 text-black transform -translate-x-1/2"><img className="w-full object-cover" src={`/FAMOVIE/images/FullLogo.png`}/></div>
 
             {/** LEFT SIDE (DAENERYS) */}
             <div className="w-full h-full flex flex-col justify-between relative overflow-hidden custom-shape1">
                 {/** BG IMAGE */}
-                <img className="w-full h-full absolute -z-20 object-cover scale-150 translate-x-40 translate-y-24" src={`/images/daenerys.jpg`} />
+                <img className="w-full h-full absolute -z-20 object-cover scale-150 translate-x-40 translate-y-24" src={`/FAMOVIE/images/daenerys.jpg`} />
                 {/** DECORATION */}
                 <div className="w-96 h-96 absolute -z-10 -left-16 -bottom-32 flex justify-center items-center rounded-full border border-white">
                     <div className="w-72 h-72 rounded-full border border-dashed border-white"></div>
@@ -59,7 +59,7 @@ export default function LandingPage() {
             </div>
 
             {/** RIGHT SIDE (IMAGE GALLERY) */}
-            <div className="w-full h-full relative custom-shape flex flex-col gap-1 bg-green-500">
+            <div className="w-full h-full relative custom-shape flex flex-col gap-1">
                 
                 {/** LIGHT REDUCER */}
                 <div className="w-full h-full absolute z-10 reduce_light pointer-events-none"></div>

@@ -13,7 +13,7 @@ export default function Top10 () {
 
   useEffect(() => {
     // Load CSV data
-    fetch('/top10.csv')
+    fetch('/FAMOVIE/top10.csv')
         .then((response) => response.text())
         .then((csvText) => {
             Papa.parse(csvText, {
