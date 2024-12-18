@@ -1,0 +1,57 @@
+.b2-button {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: flex-start; /* justify-start */
+    color: black; /* text-black */
+    border: 1px solid black; /* border border-black */
+    border-radius: 10px; /* rounded-[10px] */
+  }
+  
+.b2-button:hover, .b3-button:hover {
+    background-color: var(--black-2);
+    color: white;
+    scale: 1.1;
+    transition: all;
+    transition-duration: 150ms;
+}
+  
+.b3-button {
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+    padding-top: 0.7rem; /* py-2 */
+    padding-bottom: 0.7rem;
+    display: flex; /* flex */
+    gap: 0.5rem; /* gap-2 */
+    align-items: center; /* items-center */
+    justify-content: flex-start; /* justify-start */
+    color: black; /* text-black */
+    border: 1px solid black; /* border border-black */
+    border-radius: 10px; /* rounded-[10px] */
+}
+  
+.b4-button {
+    padding: 0.5rem 1.5rem; /* py-2 px-6 */
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    gap: 0.5rem; /* gap-2 */
+    align-items: center; /* items-center */
+    font-size: 14px; /* text-[14px] */
+    font-weight: 600; /* font-semibold */
+    color: black; /* text-black */
+    border: 1px solid white; /* border border-white */
+    border-radius: 20px; /* rounded-[20px] */
+    background-color: white; /* bg-white */
+}
+
+.b4-button:hover {
+    background-color: var(--black-2);
+    color: white;
+    }
+
+.pagination_button {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: flex-start; /* justify-start */
+    border: 1px solid black; /* border border-black */
+    border-radius: 10px; /* rounded-[10px] */
+}

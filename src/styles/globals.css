@@ -1,3 +1,5 @@
+@import './buttons.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --foreground2: #1C1C1D;
+  --black-2 : #161616;
+  --white-2 : #EDEDED;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +23,59 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.bg-black-2 {background-color: var(--black-2);}
+.border-white-2 {border-color: var(--white-2);}
+.bg-white-2 {background-color: var(--white-2);}
+.foreground2 {background-color: var(--foreground2);}
+.reduce_light {background-color: rgb(22, 22, 22, 0.20);}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width:4px; height:4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width:1px; height:1px;
+  background: black;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  width:1p; height:1px;
+  background: rgb(245 158 11);
+}
+
+.pagination::-webkit-scrollbar-thumb {
+  width:1px; height:10px;
+  background: black;
+  border-radius: 5px;
+}
+
+@layer utilities {
+  .LP_TOP_GRID {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "sansa hundredeyes"
+      "sansa bb";
+  }
+
+  .LP_BOTTOM_GRID {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "vikings rhaeneyra great"
+      "elliot narcos great";
+  }
 }
