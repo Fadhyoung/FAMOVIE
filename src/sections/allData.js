@@ -60,8 +60,8 @@ export default function AllData({ width }) {
     const handlePageChange = (page) => {
         if (page <= 0) {
             setCurrentPage(1);
-        } else if (page >= (totalPages.length + 1)) {
-            setCurrentPage((totalPages.length + 1));
+        } else if (page >= (totalPages)) {
+            setCurrentPage((totalPages));
         } else {setCurrentPage(page);}        
     };
 
