@@ -1,7 +1,7 @@
 import { HiExternalLink } from "react-icons/hi";
 import { RiScrollToBottomLine } from "react-icons/ri";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import Button1 from "@/components/Buttons";
+import Button1 from "@/app/components/Buttons";
 
 export default function LandingPage() {
     return (

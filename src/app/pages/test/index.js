@@ -5,11 +5,11 @@ import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-import { Card2 } from "@/components/Cards";
-import Top10 from "@/sections/top10";
-import AllData from "@/sections/allData";
-import LandingPage from "@/sections/landingPage";
-import Best3 from "@/sections/best3";
+import { Card2 } from "@/app/components/Cards";
+import Top10 from "@/app/sections/top10";
+import AllData from "@/app/sections/allData";
+import LandingPage from "@/app/sections/landingPage";
+import Best3 from "@/app/sections/best3";
 
 export default function test () {
 

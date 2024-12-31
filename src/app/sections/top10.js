@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Papa from "papaparse";
-import { fetchMovieImagesBatch } from "@/services/movieService";
+import { fetchMovieImagesBatch } from "@/app/services/movieService";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { Card5, Card2 } from "@/components/Cards";
+import { Card5, Card2 } from "@/app/components/Cards";
 
 export default function Top10 () {
 

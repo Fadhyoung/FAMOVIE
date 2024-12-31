@@ -1,10 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 
-import Top10 from "@/sections/top10";
-import AllData from "@/sections/allData";
-import LandingPage from "@/sections/landingPage";
-import Best3 from "@/sections/best3";
+import Top10 from "@/app/sections/top10";
+import AllData from "@/app/sections/allData";
+import LandingPage from "@/app/sections/landingPage";
+import Best3 from "@/app/sections/best3";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

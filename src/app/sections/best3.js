@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 
-import { fetchMovieImagesBatch } from "@/services/movieService";
+import { fetchMovieImagesBatch } from "@/app/services/movieService";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-import Card1 from "@/components/Cards";
+import Card1 from "@/app/components/Cards";
 import { all } from "axios";
 
 export default function Best3 () {

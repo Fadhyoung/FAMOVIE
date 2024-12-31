@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Papa from "papaparse";
-import { fetchMovieImagesBatch } from "@/services/movieService";
+import { fetchMovieImagesBatch } from "@/app/services/movieService";
 
 import { MdOutlineFilterAlt } from 'react-icons/md';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { Card4 } from '@/components/Cards';
+import { Card4 } from '@/app/components/Cards';
 
 export default function AllData({ width }) {
     
