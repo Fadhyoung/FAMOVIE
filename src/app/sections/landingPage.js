@@ -38,7 +38,7 @@ export default function LandingPage() {
                     <div className="w-2/5 border-b border-dashed border-white"></div>
                     <div className="w-1/3 flex flex-wrap gap-2">
                         {[...Array(6)].map((_, index) => (
-                            <div className="px-5 py-2 text-[9px] font-thin rounded-[5px] bg-black-2">
+                            <div key={index} className="px-5 py-2 text-[9px] font-thin rounded-[5px] bg-black-2">
                                 Genre
                             </div>
                         ))}

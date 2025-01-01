@@ -66,6 +66,7 @@ export default function Top10 () {
                 <div className="w-full flex gap-8 overflow-x-scroll snap-x" ref={scrollWrapperRef}>
                 {data.map((item, index) => (
                             <Card2 
+                                key={index}
                                 title={item["Title"]}
                                 plot={item["Plot"]}
                                 img={item["Poster"]}
