@@ -88,8 +88,8 @@ export default function AllData({ width }) {
 
                 {/* Cards Section */}
                 <div className={`w-full flex items-center flex-wrap ${data.length < 4 ? "justify-start" : "justify-between"}`}>
-                    {data.map((item) => (
-                        <Card4 key={item.id} title={item["Title"]} desc={item["Plot"]} poster={item["Poster"]} />
+                    {data.map((item, index) => (
+                        <Card4 key={index} title={item["Title"]} desc={item["Plot"]} poster={item["Poster"]} />
                     ))}
                 </div>
 
@@ -111,7 +111,7 @@ export default function AllData({ width }) {
                         dropdown
                         ? <div className='pagination flex overflow-x-scroll border rounded-lg border-black'>
                             {Array.from({length: totalPages}, (_, index) => (
-                                <button className={`basis-[20%] p-2 flex-shrink-0 text-[10px] text-black ${index % 2 === 0 ? "bg-gray-100" : "bg-white"} hover:scale-x-125`}
+                                <button  key={`page-${index}`} className={`basis-[20%] p-2 flex-shrink-0 text-[10px] text-black ${index % 2 === 0 ? "bg-gray-100" : "bg-white"} hover:scale-x-125`}
                                 onClick={() => handlePageChange(index + 1)}
                                 >{index + 1}</button>
                             ))}
