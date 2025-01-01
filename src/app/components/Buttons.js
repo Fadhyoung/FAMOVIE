@@ -1,4 +1,4 @@
-
+"use client"
 // Landing page button, button that contain image
 export const Button1 = ({area, img}) => {
     return (
@@ -7,6 +7,18 @@ export const Button1 = ({area, img}) => {
             <div className="w-full h-full absolute top-0 hover:scale-125 transition-all duration-300"><img className="w-full h-full object-cover" src={`/FAMOVIE/images/${img}`}/></div>
         </button>
     )
+}
+
+
+export function OpenLinkButton({ url, className, text }) {
+    return (
+        <button 
+            className={className} 
+            onClick={() => window.open("https://fadhyoung.github.io/Portofolio1/", "_blank")}
+        >
+            {text}
+        </button>
+    );
 }
 
 export default Button1

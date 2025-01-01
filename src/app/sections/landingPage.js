@@ -1,7 +1,7 @@
 import { HiExternalLink } from "react-icons/hi";
 import { RiScrollToBottomLine } from "react-icons/ri";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import Button1 from "@/app/components/Buttons";
+import Button1, { OpenLinkButton } from "../components/Buttons";
 
 export default function LandingPage() {
     return (
@@ -20,7 +20,7 @@ export default function LandingPage() {
                 <div className="w-96 h-96 absolute -z-10 -left-16 -bottom-32 flex justify-center items-center rounded-full border border-white">
                     <div className="w-72 h-72 rounded-full border border-dashed border-white"></div>
                 </div>
-                <div className="w-fit absolute bottom-5 right-32 flex b3-button bg-white" onClick={() => window.open("https://fadhyoung.github.io/Portofolio1/", "_blank")}>Visit my website <FaExternalLinkAlt /></div>
+                <div className="w-fit absolute bottom-5 right-32 flex b3-button bg-white"> <OpenLinkButton text={"visit my website"} /> <FaExternalLinkAlt /></div>
                 
                 {/** BLUR SECTION */}
                 <div className="h-full w-2/3 px-5 -z-20 bg-blur-1">

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect, useRef } from "react";
 import Papa from "papaparse";
 import { fetchMovieImagesBatch } from "@/app/services/movieService";
