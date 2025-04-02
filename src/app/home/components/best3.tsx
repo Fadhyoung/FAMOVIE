@@ -7,20 +7,18 @@ import { fetchMovieImagesBatch } from "@/app/services/movieService";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-import Card1 from "@/app/components/Cards";
-import { all } from "axios";
+import Card1 from "@/components/Cards";
 
 export default function Best3 () {
 
-    const [data, setData] = useState([]); // Data for the current page
+    const [data, setData] = useState<any>([]); // Data for the current page
     const [category, setCategory] = useState(["Western", "Asian", "Movies", "Indonesia"])
     const [currentPage, setCurrentPage] = useState(0)
 
     const [isLoading, setIsLoading] = useState(false);
 
     // Function to fetch specific page data
-    const fetchPageData = async () => {
+    const fetchPageData = async (currentCategory: string) => {
 
         try {
             const response = await fetch('/FAMOVIE/Best3.csv');
@@ -29,8 +27,8 @@ export default function Best3 () {
             Papa.parse(csvText, {
                 header: true,
                 skipEmptyLines: true,
-                complete: async (result) => {
-                    const allData = result.data.filter(item => item.Category === category[currentPage]);
+                complete: async (result: { data: { Category: string }[] }) => {
+                    const allData = result.data.filter(item => item.Category === currentCategory);
 
                     console.log(allData)
 
@@ -53,7 +51,7 @@ export default function Best3 () {
     }, [currentPage]);
 
     // Handle page change
-    const handlePageChange = (page) => {
+    const handlePageChange = (page: any) => {
         setIsLoading(true);
         if (page <= 0) {
             setCurrentPage(0);
