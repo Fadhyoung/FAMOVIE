@@ -6,11 +6,16 @@ import { fetchMovieImagesBatch } from "@/app/services/movieService";
 
 import { MdOutlineFilterAlt } from 'react-icons/md';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { Card4 } from '@/app/components/Cards';
+import { Card4 } from '@/components/Cards';
 
-export default function AllData({ width }) {
+interface AllDataProps {
+    width?: string,
+
+}
+
+export default function AllData({ width }: AllDataProps) {
     
-    const [data, setData] = useState([]); // Data for the current page
+    const [data, setData] = useState<any[]>([]); // Data for the current page
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
     const itemsPerPage = 8;
@@ -19,7 +24,7 @@ export default function AllData({ width }) {
     const [isLoading, setIsLoading] = useState(false);
 
     // Function to fetch specific page data
-    const fetchPageData = async (page) => {
+    const fetchPageData = async (page: any) => {
         try {
             const response = await fetch('/FAMOVIE/famovie_list.csv');
             const csvText = await response.text();
@@ -40,7 +45,7 @@ export default function AllData({ width }) {
                     const pageData = allData.slice(startIndex, endIndex);
 
                     const movieData = result.data;
-                    const moviesWithImages = await fetchMovieImagesBatch(pageData); // Use the service
+                    const moviesWithImages = await fetchMovieImagesBatch(pageData);
                     setData(moviesWithImages);
                 },
             });
@@ -59,7 +64,7 @@ export default function AllData({ width }) {
     }, [currentPage]);
 
     // Handle page change
-    const handlePageChange = (page) => {
+    const handlePageChange = (page: any) => {
         if (page <= 0) {
             setCurrentPage(1);
         } else if (page >= (totalPages)) {

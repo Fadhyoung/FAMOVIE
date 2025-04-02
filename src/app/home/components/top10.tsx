@@ -6,12 +6,12 @@ import { fetchMovieImagesBatch } from "@/app/services/movieService";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { Card5, Card2 } from "@/app/components/Cards";
+import { Card5, Card2 } from "@/components/Cards";
 
 export default function Top10 () {
 
-  const scrollWrapperRef = useRef(null);
-  const [data, setData] = useState([]);
+  const scrollWrapperRef = useRef<HTMLDivElement>(null);
+  const [data, setData] = useState<any>([]);
 
   useEffect(() => {
     // Load CSV data
@@ -30,22 +30,22 @@ export default function Top10 () {
         });
     }, []);
 
-    const scroll = (direction) => {
-        const wrapper = scrollWrapperRef.current; // Reference to the scrollable container
+    const scroll = (direction: string) => {
+        const wrapper = scrollWrapperRef.current;
         if (!wrapper) return;
     
-        const itemWidth = wrapper.firstChild?.offsetWidth || 0; // Width of a single item
-        const scrollAmount = itemWidth * 4; // Scroll by 4 items at a time
+        const itemWidth = (wrapper.firstChild as HTMLElement)?.offsetWidth || 0;
+        const scrollAmount = itemWidth * 4;
     
         if (direction === "left") {
             wrapper.scrollBy({
-                left: -scrollAmount, // Scroll left
-                behavior: "smooth", // Smooth scrolling
+                left: -scrollAmount,
+                behavior: "smooth",
             });
         } else if (direction === "right") {
             wrapper.scrollBy({
-                left: scrollAmount, // Scroll right
-                behavior: "smooth", // Smooth scrolling
+                left: scrollAmount,
+                behavior: "smooth",
             });
         }
     };
@@ -66,12 +66,12 @@ export default function Top10 () {
                     </div>
                 </div>
                 <div className="w-full flex gap-8 overflow-x-scroll snap-x" ref={scrollWrapperRef}>
-                {data.map((item, index) => (
+                {data.map((item: any, index: number) => (
                             <Card2 
                                 key={index}
                                 title={item["Title"]}
-                                plot={item["Plot"]}
-                                img={item["Poster"]}
+                                desc={item["Plot"]}
+                                poster={item["Poster"]}
                                 url={item["URL"]}
                             />
                     ))}

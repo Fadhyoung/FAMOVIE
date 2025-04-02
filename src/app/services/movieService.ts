@@ -4,7 +4,7 @@ const apiKey = '8e85c673cemsh045f5ff13a464fap10136cjsn99506692af2f';
 const apiHost = 'imdb236.p.rapidapi.com';
 
 // Fetch movie image by ID
-export const fetchMovieImage = async (id) => {
+export const fetchMovieImage = async (id: number) => {
     const options = {
         method: 'GET',
         url: `https://imdb236.p.rapidapi.com/imdb/${id}`,
@@ -25,7 +25,7 @@ export const fetchMovieImage = async (id) => {
 };
 
 // Fetch movie image by ID from OMDb
-export const fetchMovieImage2 = async (id) => {
+export const fetchMovieImage2 = async (id: number) => {
     const options = {
         method: 'GET',
         url: `https://www.omdbapi.com/?i=${id}&apikey=ff359f1e`,
@@ -42,8 +42,8 @@ export const fetchMovieImage2 = async (id) => {
 };
 
 // Fetch images for multiple movies
-export const fetchMovieImagesBatch = async (movieData) => {
-    const requests = movieData.map(async (movie) => {
+export const fetchMovieImagesBatch = async (movieData: any[]) => {
+    const requests = movieData.map(async (movie: any) => {
         const id = movie['Const']; // Assuming column 1 is the movie ID (e.g., tt11198330)
         const url = movie['URL']
         const data = await fetchMovieImage2(id);        
