@@ -2,8 +2,8 @@
 
 import Papa from "papaparse";
 
-import GetMoviesAction, { getBest3MoviesAction } from "./actions";
-import { useEffect, useState } from "react";
+import GetMoviesAction, { getBest3MoviesAction, getTop10MoviesAction } from "./actions";
+import { useEffect, useRef, useState } from "react";
 import { fetchMovieImagesBatch } from "../services/movieService";
 
 export default function useHome() {
@@ -23,12 +23,16 @@ export default function useHome() {
   ]);
   const [currentBestPage, setCurrentBestPage] = useState(0);
 
+  // Top 10 state
+  const scrollWrapperRef = useRef<HTMLDivElement>(null);
+  const [top10, setTop10] = useState<any>([]);
+
   const [dropdown, setDropdown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchMoview = async (page: any) => {
     const response = await GetMoviesAction();
-    console.log("response: ", response);  
+    console.log("response: ", response);
     Papa.parse(response, {
       header: true,
       skipEmptyLines: true,
@@ -75,11 +79,25 @@ export default function useHome() {
     }
   };
 
+  const fetchTop10 = async () => {
+    const response = await getTop10MoviesAction();
+    Papa.parse(response, {
+      header: true,
+      skipEmptyLines: true,
+      complete: async (result) => {
+        const movieData = result.data;
+        const moviesWithImages = await fetchMovieImagesBatch(movieData); // Use the service
+        setTop10(moviesWithImages);
+      },
+    });
+  };
+
   // Fetch initial page data
   useEffect(() => {
     setIsLoading(true);
     fetchMoview(currentPage);
     fetchBest3(category[currentBestPage]);
+    fetchTop10();
     setIsLoading(false);
   }, [currentPage, currentBestPage]);
 
@@ -97,16 +115,38 @@ export default function useHome() {
   const handleBest3PageChange = (page: any) => {
     setIsLoading(true);
     if (page <= 0) {
-        setCurrentBestPage(0);
-    } else if (page >= (category.length - 1)) {
-        setCurrentBestPage(category.length - 1);
-    } else {setCurrentBestPage(page);}   
-    setIsLoading(false);     
-};
+      setCurrentBestPage(0);
+    } else if (page >= category.length - 1) {
+      setCurrentBestPage(category.length - 1);
+    } else {
+      setCurrentBestPage(page);
+    }
+    setIsLoading(false);
+  };
 
   const handleDropdown = () => {
     setDropdown((prevState) => !prevState);
   };
+
+  const scroll = (direction: string) => {
+    const wrapper = scrollWrapperRef.current;
+    if (!wrapper) return;
+
+    const itemWidth = (wrapper.firstChild as HTMLElement)?.offsetWidth || 0;
+    const scrollAmount = itemWidth * 4;
+
+    if (direction === "left") {
+        wrapper.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth",
+        });
+    } else if (direction === "right") {
+        wrapper.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth",
+        });
+    }
+};
 
   return {
     data,
@@ -119,6 +159,11 @@ export default function useHome() {
     category,
     handleBest3PageChange,
     setCurrentBestPage,
+
+    // Top 10 state
+    top10,
+    scrollWrapperRef,
+    scroll,
 
     dropdown,
     totalPages,

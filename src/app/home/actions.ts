@@ -11,3 +11,10 @@ export async function getBest3MoviesAction() {
 
     return csvText;
 }
+
+export async function getTop10MoviesAction() {
+    const response = await fetch("/FAMOVIE/top10.csv");
+    const csvText = await response.text();
+
+    return csvText;
+}
