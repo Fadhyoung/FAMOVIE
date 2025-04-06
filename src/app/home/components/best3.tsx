@@ -8,58 +8,11 @@ import { fetchMovieImagesBatch } from "@/app/services/movieService";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Card1 from "@/components/Cards";
+import useHome from "../hooks";
 
 export default function Best3 () {
 
-    const [data, setData] = useState<any>([]); // Data for the current page
-    const [category, setCategory] = useState(["Western", "Asian", "Movies", "Indonesia"])
-    const [currentPage, setCurrentPage] = useState(0)
-
-    const [isLoading, setIsLoading] = useState(false);
-
-    // Function to fetch specific page data
-    const fetchPageData = async (currentCategory: string) => {
-
-        try {
-            const response = await fetch('/FAMOVIE/Best3.csv');
-            const csvText = await response.text();
-
-            Papa.parse(csvText, {
-                header: true,
-                skipEmptyLines: true,
-                complete: async (result: { data: { Category: string }[] }) => {
-                    const allData = result.data.filter(item => item.Category === currentCategory);
-
-                    console.log(allData)
-
-                    const moviesWithImages = await fetchMovieImagesBatch(allData); // Use the service
-                    setData(moviesWithImages);
-                },
-            });
-        } catch (error) {
-            console.error('Error fetching page data:', error);
-        }
-    };
-
-    console.log("data length: ", data.length)
-
-    // Fetch initial page data
-    useEffect(() => {
-        setIsLoading(true);
-        fetchPageData(category[currentPage]);
-        setIsLoading(false);
-    }, [currentPage]);
-
-    // Handle page change
-    const handlePageChange = (page: any) => {
-        setIsLoading(true);
-        if (page <= 0) {
-            setCurrentPage(0);
-        } else if (page >= (category.length - 1)) {
-            setCurrentPage(category.length - 1);
-        } else {setCurrentPage(page);}   
-        setIsLoading(false);     
-    };
+    const { best3: data, currentBestPage: currentPage, category, isLoading, setCurrentBestPage: setCurrentPage, handleBest3PageChange: handlePageChange } = useHome();
 
     if (isLoading) {
         <div>Loading..</div>

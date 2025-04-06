@@ -1,12 +1,9 @@
 "use client"
 
-import { useState, useEffect } from 'react';
-import Papa from "papaparse";
-import { fetchMovieImagesBatch } from "@/app/services/movieService";
-
 import { MdOutlineFilterAlt } from 'react-icons/md';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Card4 } from '@/components/Cards';
+import useHome from '../hooks';
 
 interface AllDataProps {
     width?: string,
@@ -15,67 +12,8 @@ interface AllDataProps {
 
 export default function AllData({ width }: AllDataProps) {
     
-    const [data, setData] = useState<any[]>([]); // Data for the current page
-    const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(0);
-    const itemsPerPage = 8;
-
-    const [dropdown, setDropdown] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-
-    // Function to fetch specific page data
-    const fetchPageData = async (page: any) => {
-        try {
-            const response = await fetch('/FAMOVIE/famovie_list.csv');
-            const csvText = await response.text();
-
-            Papa.parse(csvText, {
-                header: true,
-                skipEmptyLines: true,
-                complete: async (result) => {
-                    const allData = result.data;
-
-                    // Calculate total pages
-                    const totalPagesCount = Math.ceil(allData.length / itemsPerPage);
-                    setTotalPages(totalPagesCount);
-
-                    // Slice data for the requested page
-                    const startIndex = (page - 1) * itemsPerPage;
-                    const endIndex = startIndex + itemsPerPage;
-                    const pageData = allData.slice(startIndex, endIndex);
-
-                    const movieData = result.data;
-                    const moviesWithImages = await fetchMovieImagesBatch(pageData);
-                    setData(moviesWithImages);
-                },
-            });
-        } catch (error) {
-            console.error('Error fetching page data:', error);
-        }
-    };
-
-    console.log("data length: ", data.length)
-
-    // Fetch initial page data
-    useEffect(() => {
-        setIsLoading(true);
-        fetchPageData(currentPage);
-        setIsLoading(false);
-    }, [currentPage]);
-
-    // Handle page change
-    const handlePageChange = (page: any) => {
-        if (page <= 0) {
-            setCurrentPage(1);
-        } else if (page >= (totalPages)) {
-            setCurrentPage((totalPages));
-        } else {setCurrentPage(page);}        
-    };
-
-    const handleDropdown = () => {
-        setDropdown((prevState) => !prevState);
-    }
-
+    const {isLoading, data, dropdown, currentPage, totalPages, handlePageChange, handleDropdown} = useHome();
+    
     if (isLoading) {
         <div>Loading..</div>
     }
