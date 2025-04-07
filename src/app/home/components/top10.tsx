@@ -1,12 +1,8 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react";
-import Papa from "papaparse";
-import { fetchMovieImagesBatch } from "@/app/services/movieService";
-
+import React from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { Card5, Card2 } from "@/components/Cards";
+import { Card2 } from "@/components/Cards";
 import useHome from "../hooks";
 
 export default function Top10 () {
@@ -29,10 +25,10 @@ export default function Top10 () {
                 {data.map((item: any, index: number) => (
                             <Card2 
                                 key={index}
-                                title={item["Title"]}
-                                desc={item["Plot"]}
-                                poster={item["Poster"]}
-                                url={item["URL"]}
+                                title={item.Title}
+                                desc={item.Plot}
+                                poster={item.Poster}
+                                url={item.URL}
                             />
                     ))}
                 </div>

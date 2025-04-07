@@ -1,10 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
-import Papa from "papaparse";
-
-import { fetchMovieImagesBatch } from "@/app/services/movieService";
-
+import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Card1 from "@/components/Cards";

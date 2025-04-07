@@ -34,7 +34,7 @@ export default function AllData({ width }: AllDataProps) {
                 {/* Cards Section */}
                 <div className={`w-full flex items-center flex-wrap ${data.length < 4 ? "justify-start" : "justify-between"}`}>
                     {data.map((item, index) => (
-                        <Card4 key={index} title={item["Title"]} desc={item["Plot"]} poster={item["Poster"]} />
+                        <Card4 key={index} title={item["Title"]} desc={item.Plot} poster={item.Poster} />
                     ))}
                 </div>
 

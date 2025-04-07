@@ -5,16 +5,17 @@ import Papa from "papaparse";
 import GetMoviesAction, { getBest3MoviesAction, getTop10MoviesAction } from "./actions";
 import { useEffect, useRef, useState } from "react";
 import { fetchMovieImagesBatch } from "../services/movieService";
+import { movie } from "@/types/movie";
 
 export default function useHome() {
   // All data state
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<movie[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 8;
 
   // Best 3 state
-  const [best3, setBest3] = useState<any>([]); // Data for the current page
+  const [best3, setBest3] = useState<movie[]>([]); // Data for the current page
   const [category, setCategory] = useState([
     "Western",
     "Asian",
@@ -25,7 +26,7 @@ export default function useHome() {
 
   // Top 10 state
   const scrollWrapperRef = useRef<HTMLDivElement>(null);
-  const [top10, setTop10] = useState<any>([]);
+  const [top10, setTop10] = useState<movie[]>([]);
 
   const [dropdown, setDropdown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
