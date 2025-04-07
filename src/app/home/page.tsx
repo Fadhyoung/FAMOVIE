@@ -1,7 +1,7 @@
 import LandingPage from "@/app/home/components/landingPage";
 import Top10 from "@/app/home/components/top10"
-import Best3 from "./components/best3";
-import AllData from "./components/allData";
+import Best3 from "@/app/home/components/best3";
+import AllData from "@/app/home/components/allData";
 import Link from "next/link";
 
 export default function HomeComponent() {

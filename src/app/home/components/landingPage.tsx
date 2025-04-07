@@ -13,7 +13,7 @@ export default function LandingPage() {
             <div className="w-52 pb-3 absolute bottom-0 left-1/2 p-2 z-30 text-black transform -translate-x-1/2"><img className="w-full object-cover" src={`/FAMOVIE/images/FullLogo.png`}/></div>
 
             {/** LEFT SIDE (DAENERYS) */}
-            <div className="w-full h-full flex flex-col justify-between relative overflow-hidden custom-shape1">
+            <div className="w-full h-full flex flex-col justify-between relative text-white overflow-hidden custom-shape1">
                 {/** BG IMAGE */}
                 <img className="w-full h-full absolute -z-20 object-cover scale-150 translate-x-40 translate-y-24" src={`/FAMOVIE/images/daenerys.jpg`} />
                 {/** DECORATION */}

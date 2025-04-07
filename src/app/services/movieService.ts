@@ -16,7 +16,6 @@ export const fetchMovieImage = async (id: number) => {
 
     try {
         const response = await axios.request(options);
-        console.log("service result: ", response)
         return response.data; // Return only the image URL
     } catch (error) {
         console.error(`Error fetching image for ID ${id}:`, error);
@@ -33,7 +32,6 @@ export const fetchMovieImage2 = async (id: number) => {
 
     try {
         const response = await axios.request(options);
-        console.log("service result: ", response.data)
         return response.data; // Return only the image URL
     } catch (error) {
         console.error(`Error fetching image for ID ${id}:`, error);

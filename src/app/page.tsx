@@ -1,6 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
-import HomeComponent from "./home/page";
+import HomeComponent from "@/app/home/page";
 
 export default function HomeApp() {
 
