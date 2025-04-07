@@ -3,7 +3,7 @@
 import { MdOutlineFilterAlt } from 'react-icons/md';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Card4 } from '@/components/Cards';
-import useHome from '../hooks';
+import useHome from '@/app/home/hooks';
 
 interface AllDataProps {
     width?: string,

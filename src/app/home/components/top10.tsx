@@ -3,7 +3,7 @@
 import React from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Card2 } from "@/components/Cards";
-import useHome from "../hooks";
+import useHome from "@/app/home/hooks";
 
 export default function Top10 () {
 

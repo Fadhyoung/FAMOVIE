@@ -4,7 +4,7 @@ import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Card1 from "@/components/Cards";
-import useHome from "../hooks";
+import useHome from "@/app/home/hooks";
 
 export default function Best3 () {
 

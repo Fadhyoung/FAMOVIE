@@ -4,7 +4,7 @@ import Papa from "papaparse";
 
 import GetMoviesAction, { getBest3MoviesAction, getTop10MoviesAction } from "./actions";
 import { useEffect, useRef, useState } from "react";
-import { fetchMovieImagesBatch } from "../services/movieService";
+import { fetchMovieImagesBatch } from "@/app/services/movieService";
 import { movie } from "@/types/movie";
 
 export default function useHome() {
