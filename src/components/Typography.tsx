@@ -6,7 +6,7 @@ export type TypographyProps = {
   type?: 'display' | 'title' | 'subtitle' | 'body' | 'button' | 'overline';
   className?: string;
   children?: React.ReactNode;
-  color?: 'primary' | 'secondary' | 'tertiary';
+  color?: 'primary' | 'secondary' | 'tertiary' | 'link';
   weight?: string;
   styles?: CSSProperties;
   visibleOn?: 'mobile-only' | 'desktop-only' | 'all';
@@ -14,21 +14,22 @@ export type TypographyProps = {
 };
 
 const variantClasses: Record<TypographyProps['variant'], string> = {
-  '2xs': 'lg:text-[10px] xs:text-[6px]',
-  xs: 'lg:text-[12px] xs:text-[8px]',
-  sm: 'lg:text-[14px] xs:text-[10px]',
-  md: 'lg:text-[16px] xs:text-[12px]',
-  lg: 'lg:text-[20px] xs:text-[16px]',
-  xl: 'lg:text-[24px] xs:text-[20px]',
-  '2xl': 'lg:text-[30px] xs:text-[24px]',
-  '3xl': 'lg:text-[34px] xs:text-[24px]',
-  '4xl': 'lg:text-[40px] xs:text-[34px]',
+  '2xs': 'lg:text-[0.625rem] xs:text-[0.375rem]',
+  xs: 'lg:text-[0.75rem] xs:text-[0.5rem]',
+  sm: 'lg:text-[0.875rem] xs:text-[0.625rem]',
+  md: 'lg:text-[1rem] xs:text-[0.75rem]',
+  lg: 'lg:text-[1.25rem] xs:text-[1rem]',
+  xl: 'lg:text-[1.5rem] xs:text-[1.25rem]',
+  '2xl': 'lg:text-[1.875rem] xs:text-[1.5rem]',
+  '3xl': 'lg:text-[2.125rem] xs:text-[1.5rem]',
+  '4xl': 'lg:text-[6rem] xs:text-[2.25rem]',
 };
 
 const colorClasses: Record<NonNullable<TypographyProps['color']>, string> = {
   primary: 'text-[#FFFFFF]',
   secondary: 'text-[#000000]',
   tertiary: 'text-[#a3a3a3]',
+  link: 'text-[#3366CC]',
 };
 
 const visibleOnClasses: Record<

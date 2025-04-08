@@ -29,16 +29,16 @@ export default function Best3() {
         className="w-11/12 m-auto rounded-b-[40px] drop-shadow-xl bg-gradient-to-t from-black to-transparent"
         style={{ padding: '1px' }}
       >
-        <div className="w-full px-16 py-10 relative flex flex-col gap-5 justify-center items-center overflow-hidden rounded-b-[38px] text-black ">
+        <div className="w-full lg:px-16 xs:px-2 py-10 relative flex flex-col gap-5 justify-center items-center overflow-hidden rounded-b-[38px] text-black ">
           {/** DECORATION */}
           <div className="w-full h-full absolute -z-30 bg-white"></div>
           <div className="w-[1644px] h-[1644px] absolute -z-10 -bottom-[1000] rounded-full border border-white-2"></div>
           <div className="w-[1100px] h-[1100px] absolute -z-20 -bottom-[625] rounded-full bg-white-2"></div>
 
           {/** TOP SECTION */}
-          <div className="w-full flex gap-20 justify-between">
+          <div className="w-full flex lg:flex-row xs:flex-col lg:gap-20 xs:gap-5 justify-between">
             {/** 1ST */}
-            <div className="w-1/3 flex flex-col items-start gap-2">
+            <div className="lg:w-1/3 xs:w-full flex flex-col lg:items-start xs:items-center gap-2">
               <Button
                 radius="lg"
                 buttonType="outline"
@@ -71,7 +71,7 @@ export default function Best3() {
               </Button>
             </div>
             {/** 2ND */}
-            <div className="w-1/3 flex flex-col items-center text-center text-black">
+            <div className="lg:w-1/3 xs:w-full flex flex-col items-center text-center text-black">
               <Typography variant="sm" weight="400" color="secondary">
                 {t('firstRecomendation')}
               </Typography>
@@ -80,7 +80,7 @@ export default function Best3() {
               </Typography>
             </div>
             {/** 3RD */}
-            <div className="w-1/3 flex flex-col items-end gap-2">
+            <div className="lg:w-1/3 xs:w-full lg:flex xs:hidden flex-col items-end gap-2">
               <div className="w-fit flex gap-2 justify-between">
                 <Button
                   radius="lg"
@@ -98,7 +98,7 @@ export default function Best3() {
                   className="flex gap-4"
                   onClick={() => handlePageChange(currentPage + 1)}
                 >
-                  <FiChevronRight />{' '}
+                  <FiChevronRight />
                 </Button>
               </div>
               <Button
@@ -113,12 +113,12 @@ export default function Best3() {
             </div>
           </div>
           {/** MIDDLE SECTION */}
-          <div className="w-full flex mt-10 gap-10 justify-between items-end">
+          <div className="w-full flex lg:flex-row xs:flex-col mt-10 lg:gap-10 xs:gap-2 justify-between items-end">
             {/** CARD */}
             {!isLoading ? (
               <>
                 {data.map((item, index) => (
-                  <Card1 key={index} width={'w-1/3'} height={'h-56'} data={item} />
+                  <Card1 key={index} width={'lg:w-1/3 xs:w-full'} height={'h-56'} data={item} />
                 ))}
               </>
             ) : (
@@ -126,7 +126,7 @@ export default function Best3() {
             )}
           </div>
           {/** BOTTOM SECTION */}
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5 ">
             {category.map((catName, index) => (
               <Button
                 key={index}
