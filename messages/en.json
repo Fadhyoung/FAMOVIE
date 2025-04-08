@@ -22,7 +22,8 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "visitMyWebsite": "Visit my website"
   },
   "card": {
     "reviewHere": "My review here",
