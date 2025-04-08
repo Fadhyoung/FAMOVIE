@@ -839,6 +839,11 @@ client-only@0.0.1:
   resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
 
+clsx@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
+  integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
+
 color-convert@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz"
@@ -1399,8 +1404,9 @@ esutils@^2.0.2:
   version "0.1.0"
   dependencies:
     axios "^1.7.9"
-    famovie "file:../../../.cache/yarn/v6/npm-famovie-0.1.0-65b8ecc8-6694-45dc-8ddf-e4f17ad6ac9b-1744070907602/node_modules/famovie"
+    famovie "file:../../../.cache/yarn/v6/npm-famovie-0.1.0-f2759660-9209-4b3c-aaf6-5a1b577d961c-1744076457795/node_modules/famovie"
     next "15.1.0"
+    next-intl "^4.0.2"
     papaparse "^5.4.1"
     react "^19.0.0"
     react-dom "^19.0.0"

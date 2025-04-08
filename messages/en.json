@@ -3,8 +3,24 @@
     "movieIveWatched": "Movie I've Watched",
     "famovie": "FAMOVIE",
     "title": ", Pure subjective here",
+    "titleDescription": "Famovie will give you recomendation of all the best series that owener ever watched. this recomendation is for those of you that adore quite much with a few genre below",
+    "genres": "Genres",
+    "gameOfThrones": "Game of Thrones",
+    "rate": "9.1",
+    "imdbRating": "IMDB Rating",
+    "myReviewHere": "My review here",
+    "famovieImdbList": "Famovie IMDB list",
+    "letterbox": "Letterboxd",
+    "firstRecomendation": "First Recommendation",
+    "myBest3": "GETTING TO KNOW WITH MY BEST 3",
+    "western": "Western",
+    "asian": "Asian",
+    "movies": "Movies",
+    "indonesian": "Indonesian",
+    "top10Recommendations": "Top 10 Recommendations",
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "loading": "Loading..."
   }
 }

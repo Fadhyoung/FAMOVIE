@@ -5,6 +5,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Card1 from '@/components/Cards';
 import useHome from '@/app/home/hooks';
+import Typography from '@/components/Typography';
 
 export default function Best3() {
   const {
@@ -46,7 +47,8 @@ export default function Best3() {
                   )
                 }
               >
-                {t('famovieImdbList')}<FaExternalLinkAlt />
+                {t('famovieImdbList')}
+                <FaExternalLinkAlt />
               </button>
               <button
                 className="b3-button"
@@ -61,11 +63,13 @@ export default function Best3() {
               </button>
             </div>
             {/** 2ND */}
-            <div className="w-1/3 text-center text-black">
-              <p className="text-[14px] font-medium">{t('firstRecomendation')}</p>
-              <h1 className="text-[32px] font-semibold">
+            <div className="w-1/3 flex flex-col items-center text-center text-black">
+              <Typography variant="sm" weight="400" color='secondary'>
+                {t('firstRecomendation')}
+              </Typography>
+              <Typography variant="2xl" weight="700" color='secondary'>
                 {t('myBest3')}
-              </h1>
+              </Typography>
             </div>
             {/** 3RD */}
             <div className="w-1/3 flex flex-col items-end gap-2">

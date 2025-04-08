@@ -6,6 +6,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import Button1, { OpenLinkButton } from '@/components/Buttons';
 import useHome from '@/app/home/hooks';
 import Image from 'next/image';
+import Typography from '@/components/Typography';
 
 export default function LandingPage() {
   const { t } = useHome();
@@ -56,13 +57,12 @@ export default function LandingPage() {
           </div>
           {/** DESC 1 */}
           <div className='w-full p-10 flex flex-col gap-3 justify-start'>
-            <h1 className='w-1/2 text-[40px] font-extralight italic leading-[48px]'>
-              <span className='text-[54px] font-medium'>{t('famovie')}</span>,
-              {t('movieIveWatched')}
-            </h1>
-            <p className='w-1/3 text-[12px] font-thin text-justify'>
+            <Typography variant='4xl' weight='700'>
+              {t('famovie')}
+            </Typography>
+            <Typography variant='sm' weight='500' className='w-1/2'>
               {t('titleDescription')}
-            </p>
+            </Typography>
             <div className='w-2/5 border-b border-dashed border-white'></div>
             <div className='w-1/3 flex flex-wrap gap-2'>
               {[...Array(6)].map((_, index) => (
@@ -77,13 +77,21 @@ export default function LandingPage() {
           </div>
           {/** DESC 2 */}
           <div className='w-full flex flex-col gap-0 p-10'>
-            <h1 className='text-[20px] font-thin italic'>{t('gameOfThrones')}</h1>
-            <div className='flex gap-2 items-end'>
-              <h1 className='text-[40px] font-thin italic'>{t('rate')}</h1>
-              <p className='mb-3 font-thin italic'>{t('imdbRating')}</p>
+            <Typography variant='2xl' weight='700'>
+              {t('gameOfThrones')}
+            </Typography>
+            <div className='flex gap-2 items-center'>
+              <Typography variant='xl' weight='700'>
+                {t('rate')}
+              </Typography>
+              <Typography variant='md' weight='400' className='italic'>
+                {t('imdbRating')}
+              </Typography>
             </div>
             <div className='flex gap-2 items-center'>
-              <p className='font-thin'>{t('myReviewHere')}</p>
+              <Typography variant='xl' weight='500'>
+                {t('myReviewHere')}
+              </Typography>
               <HiExternalLink size={30} />
             </div>
           </div>
