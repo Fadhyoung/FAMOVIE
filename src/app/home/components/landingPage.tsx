@@ -3,10 +3,12 @@
 import { HiExternalLink } from 'react-icons/hi';
 import { RiScrollToBottomLine } from 'react-icons/ri';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import Button1, { OpenLinkButton } from '@/components/Buttons';
+import { OpenLinkButton } from '@/components/Buttons';
 import useHome from '@/app/home/hooks';
 import Image from 'next/image';
 import Typography from '@/components/Typography';
+import coverMovies from '@/app/data/coverMovies.json';
+import { CoverButton } from '@/app/home/components/coverButtons';
 
 export default function LandingPage() {
   const { t } = useHome();
@@ -104,17 +106,15 @@ export default function LandingPage() {
 
           {/** TOP SIDE */}
           <div className='w-full h-1/2 gap-1 overflow-hidden LP_TOP_GRID foreground2'>
-            <Button1 area={'sansa'} img={'sansa.jpg'} />
-            <Button1 area={'hundredeyes'} img={'hundredeyes.jpg'} />
-            <Button1 area={'bb'} img={'bb.jpg'} />
+            {coverMovies.top.map(({ area, alt, img }) => (
+              <CoverButton key={area} area={area} alt={alt} img={img} />
+            ))}
           </div>
           {/** BOTTOM SIDE */}
           <div className='w-full h-1/2 gap-1 overflow-hidden LP_BOTTOM_GRID foreground2'>
-            <Button1 area={'vikings'} img={'vikings.jpg'} />
-            <Button1 area={'elliot'} img={'elliot.jpg'} />
-            <Button1 area={'rhaeneyra'} img={'rhaenyra .jpg'} />
-            <Button1 area={'narcos'} img={'narcos.jpeg'} />
-            <Button1 area={'great'} img={'great.jpg'} />
+            {coverMovies.bottom.map(({ area, alt, img }) => (
+              <CoverButton key={area} area={area} alt={alt} img={img} />
+            ))}
           </div>
         </div>
       </div>

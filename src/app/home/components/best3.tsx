@@ -6,6 +6,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Card1 from '@/components/Cards';
 import useHome from '@/app/home/hooks';
 import Typography from '@/components/Typography';
+import Button from '@/components/Button';
 
 export default function Best3() {
   const {
@@ -38,8 +39,11 @@ export default function Best3() {
           <div className="w-full flex gap-20 justify-between">
             {/** 1ST */}
             <div className="w-1/3 flex flex-col items-start gap-2">
-              <button
-                className="b3-button"
+              <Button
+                radius="lg"
+                buttonType="outline"
+                size="md"
+                className="flex gap-4"
                 onClick={() =>
                   window.open(
                     'https://www.imdb.com/list/ls547498540/?ref_=ext_shr_lnk',
@@ -49,9 +53,12 @@ export default function Best3() {
               >
                 {t('famovieImdbList')}
                 <FaExternalLinkAlt />
-              </button>
-              <button
-                className="b3-button"
+              </Button>
+              <Button
+                radius="lg"
+                buttonType="outline"
+                size="md"
+                className="flex gap-4"
                 onClick={() =>
                   window.open(
                     'https://www.imdb.com/list/ls547498540/?ref_=ext_shr_lnk',
@@ -59,35 +66,50 @@ export default function Best3() {
                   )
                 }
               >
-                {t('letterbox')} <FaExternalLinkAlt />
-              </button>
+                {t('letterbox')}
+                <FaExternalLinkAlt />
+              </Button>
             </div>
             {/** 2ND */}
             <div className="w-1/3 flex flex-col items-center text-center text-black">
-              <Typography variant="sm" weight="400" color='secondary'>
+              <Typography variant="sm" weight="400" color="secondary">
                 {t('firstRecomendation')}
               </Typography>
-              <Typography variant="2xl" weight="700" color='secondary'>
+              <Typography variant="2xl" weight="700" color="secondary">
                 {t('myBest3')}
               </Typography>
             </div>
             {/** 3RD */}
             <div className="w-1/3 flex flex-col items-end gap-2">
               <div className="w-fit flex gap-2 justify-between">
-                <button
-                  className="b3-button"
+                <Button
+                  radius="lg"
+                  buttonType="outline"
+                  size="md"
+                  className="flex gap-4"
                   onClick={() => handlePageChange(currentPage - 1)}
                 >
                   <FiChevronLeft />
-                </button>
-                <button
-                  className="b3-button"
+                </Button>
+                <Button
+                  radius="lg"
+                  buttonType="outline"
+                  size="md"
+                  className="flex gap-4"
                   onClick={() => handlePageChange(currentPage + 1)}
                 >
                   <FiChevronRight />{' '}
-                </button>
+                </Button>
               </div>
-              <button className="b3-button">#{category[currentPage]}</button>
+              <Button
+                radius="lg"
+                buttonType="outline"
+                size="md"
+                className="flex gap-4"
+                onClick={() => handlePageChange(currentPage + 1)}
+              >
+                #{category[currentPage]}
+              </Button>
             </div>
           </div>
           {/** MIDDLE SECTION */}
@@ -95,52 +117,30 @@ export default function Best3() {
             {/** CARD */}
             {!isLoading ? (
               <>
-                <Card1 width={'w-1/3'} height={'h-56'} data={data[0]} />
-                <Card1 width={'w-1/3'} height={'h-56'} data={data[1]} />
-                <Card1 width={'w-1/3'} height={'h-56'} data={data[2]} />
+                {data.map((item, index) => (
+                  <Card1 key={index} width={'w-1/3'} height={'h-56'} data={item} />
+                ))}
               </>
             ) : (
-              <p>{t('loading')}</p>
+              <Typography variant='lg'>{t('loading')}</Typography>
             )}
           </div>
           {/** BOTTOM SECTION */}
           <div className="flex gap-5">
-            <button
-              className={`b3-button ${
-                currentPage === 0 ? 'bg-black text-white' : 'bg-white'
-              }`}
-              onClick={() => setCurrentPage(0)}
-            >
-              {' '}
-              {t('western')}
-            </button>
-            <button
-              className={`b3-button ${
-                currentPage === 1 ? 'bg-black text-white' : 'bg-white'
-              }`}
-              onClick={() => setCurrentPage(1)}
-            >
-              {' '}
-              {t('asian')}
-            </button>
-            <button
-              className={`b3-button ${
-                currentPage === 2 ? 'bg-black text-white' : 'bg-white'
-              }`}
-              onClick={() => setCurrentPage(2)}
-            >
-              {' '}
-              {t('movies')}
-            </button>
-            <button
-              className={`b3-button ${
-                currentPage === 3 ? 'bg-black text-white' : 'bg-white'
-              }`}
-              onClick={() => setCurrentPage(3)}
-            >
-              {' '}
-              {t('indonesian')}
-            </button>
+            {category.map((catName, index) => (
+              <Button
+                key={index}
+                radius="lg"
+                buttonType="outline"
+                size="md"
+                className={`flex gap-4 ${
+                  currentPage === index ? '!bg-black text-white' : 'bg-white'
+                }`}
+                onClick={() => setCurrentPage(index)}
+              >
+                {t(catName.toLowerCase())}
+              </Button>
+            ))}
           </div>
         </div>
       </div>
