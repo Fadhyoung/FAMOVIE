@@ -88,7 +88,6 @@ export const Card1 = ({ width, height, data }: CardProps) => {
           </Typography>
         </div>
       </div>
-      `
     </>
   );
 };
