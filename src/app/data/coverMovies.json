@@ -1,0 +1,15 @@
+{
+    "top": [
+      { "area": "left", "img": "sansa.jpg", "alt": "sansa" },
+      { "area": "top-right", "img": "hundredeyes.jpg", "alt": "hundredeyes" },
+      { "area": "bottom-right", "img": "bb.jpg", "alt": "bb" }
+    ],
+    "bottom": [
+      { "area": "left-top", "img": "vikings.jpg", "alt": "vikings" },
+      { "area": "left-bottom", "img": "elliot.jpg", "alt": "elliot" },
+      { "area": "center-top", "img": "rhaenyra .jpg", "alt": "rhaenyra" },
+      { "area": "center-bottom", "img": "narcos.jpeg", "alt": "narcos" },
+      { "area": "right", "img": "great.jpg", "alt": "great" }
+    ]
+  }
+  

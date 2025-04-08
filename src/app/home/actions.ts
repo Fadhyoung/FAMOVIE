@@ -1,20 +1,20 @@
 export default async function GetMoviesAction() {
-    const response = await fetch("/FAMOVIE/famovie_list.csv");
-    const csvText = await response.text();
+  const response = await fetch('/FAMOVIE/famovie_list.csv');
+  const csvText = await response.text();
 
-    return csvText;
+  return csvText;
 }
 
 export async function getBest3MoviesAction() {
-    const response = await fetch("/FAMOVIE/Best3.csv");
-    const csvText = await response.text();
+  const response = await fetch('/FAMOVIE/Best3.csv');
+  const csvText = await response.text();
 
-    return csvText;
+  return csvText;
 }
 
 export async function getTop10MoviesAction() {
-    const response = await fetch("/FAMOVIE/top10.csv");
-    const csvText = await response.text();
+  const response = await fetch('/FAMOVIE/top10.csv');
+  const csvText = await response.text();
 
-    return csvText;
+  return csvText;
 }
