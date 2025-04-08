@@ -6,11 +6,7 @@ import { Card4 } from '@/components/Cards';
 import useHome from '@/app/home/hooks';
 import Button from '@/components/Button';
 
-interface AllDataProps {
-  width?: string;
-}
-
-export default function AllData({ width }: AllDataProps) {
+export default function AllData() {
   const {
     t,
     isLoading,
@@ -29,7 +25,7 @@ export default function AllData({ width }: AllDataProps) {
   return (
     <>
       <div
-        className={`${width} m-auto flex flex-col items-center justify-center gap-5`}
+        className="lg:w-3/4 xs:w-full m-auto flex flex-col items-center justify-center gap-5"
       >
         {/* Header Section */}
         <div className="w-full flex justify-between">

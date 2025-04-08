@@ -102,7 +102,7 @@ export default function LandingPage() {
               radius="lg"
               variant="primary"
               buttonType="solid"
-              size='md'
+              size='lg'
               className='w-fit flex gap-2'
               onClick={() =>
                 window.open(

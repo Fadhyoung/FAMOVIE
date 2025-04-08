@@ -14,7 +14,7 @@ export default function HomeComponent() {
 
         <Top10 />
 
-        <AllData width={'w-3/4'} />
+        <AllData />
 
         {/** FOOTER */}
         <div className="w-full p-10 flex gap-20 justify-center items-center foreground2">
