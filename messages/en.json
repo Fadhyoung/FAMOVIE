@@ -23,5 +23,10 @@
     "about": "About",
     "contact": "Contact",
     "loading": "Loading..."
+  },
+  "card": {
+    "reviewHere": "My review here",
+    "imdb": "IMDB",
+    "name": "Name"
   }
 }

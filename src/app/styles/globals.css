@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.random {
+  background-color: #a3a3a3;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

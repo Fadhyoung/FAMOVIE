@@ -1,5 +1,7 @@
 'use client';
 
+import Button from '@/components/Button';
+
 interface OpenLinkButtonProps {
   url?: string;
   className?: string;
@@ -8,14 +10,14 @@ interface OpenLinkButtonProps {
 
 export function OpenLinkButton({ className, text }: OpenLinkButtonProps) {
   return (
-    <button
+    <Button
       className={className}
       onClick={() =>
         window.open('https://fadhyoung.github.io/Portofolio1/', '_blank')
       }
     >
       {text}
-    </button>
+    </Button>
   );
 }
 

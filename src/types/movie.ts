@@ -9,10 +9,10 @@ export interface movie {
   Poster: string;
   URL: string;
   TitleType: string;
-  IMDbRating: number;
+  imdbRating: string;
   RuntimeMins: number;
   Year: number;
-  Genres: string;
+  Genre: string;
   NumVotes: number;
   ReleaseDate: Date;
   Directors: string;

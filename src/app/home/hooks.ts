@@ -1,15 +1,18 @@
-"use client";
+'use client';
 
-import Papa from "papaparse";
+import Papa from 'papaparse';
 
-import GetMoviesAction, { getBest3MoviesAction, getTop10MoviesAction } from "./actions";
-import { useEffect, useRef, useState } from "react";
-import { fetchMovieImagesBatch } from "@/app/services/movieService";
-import { movie } from "@/types/movie";
-import { useTranslations } from "next-intl";
+import GetMoviesAction, {
+  getBest3MoviesAction,
+  getTop10MoviesAction,
+} from './actions';
+import { useEffect, useRef, useState } from 'react';
+import { fetchMovieImagesBatch } from '@/app/services/movieService';
+import { movie } from '@/types/movie';
+import { useTranslations } from 'next-intl';
 
 export default function useHome() {
-  const t = useTranslations("home");
+  const t = useTranslations('home');
 
   // All data state
   const [data, setData] = useState<movie[]>([]);
@@ -19,12 +22,12 @@ export default function useHome() {
 
   // Best 3 state
   const [best3, setBest3] = useState<movie[]>([]); // Data for the current page
-  const [category, setCategory] = useState([
-    "Western",
-    "Asian",
-    "Movies",
-    "Indonesia",
-  ]);
+  const category = [
+    'Western',
+    'Asian',
+    'Movies',
+    'Indonesia',
+  ];
   const [currentBestPage, setCurrentBestPage] = useState(0);
 
   // Top 10 state
@@ -34,13 +37,12 @@ export default function useHome() {
   const [dropdown, setDropdown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchMoview = async (page: any) => {
+  const fetchMoview = async (page: number) => {
     const response = await GetMoviesAction();
-    console.log("response: ", response);
     Papa.parse(response, {
       header: true,
       skipEmptyLines: true,
-      complete: async (result) => {
+      complete: async (result: { data: movie[] }) => {
         const allData = result.data;
 
         // Calculate total pages
@@ -52,7 +54,6 @@ export default function useHome() {
         const endIndex = startIndex + itemsPerPage;
         const pageData = allData.slice(startIndex, endIndex);
 
-        const movieData = result.data;
         const moviesWithImages = await fetchMovieImagesBatch(pageData);
         setData(moviesWithImages);
       },
@@ -62,24 +63,20 @@ export default function useHome() {
   // Function to fetch specific page data
   const fetchBest3 = async (currentCategory: string) => {
     try {
-      const response = await getBest3MoviesAction();
-
+      const response = await getBest3MoviesAction();      
       Papa.parse(response, {
         header: true,
         skipEmptyLines: true,
-        complete: async (result: { data: { Category: string }[] }) => {
+        complete: async (result: { data: (movie & { Category: string })[] }) => {
           const allData = result.data.filter(
             (item) => item.Category === currentCategory
           );
-
-          console.log(allData);
-
           const moviesWithImages = await fetchMovieImagesBatch(allData); // Use the service
           setBest3(moviesWithImages);
         },
       });
     } catch (error) {
-      console.error("Error fetching page data:", error);
+      console.error('Error fetching page data:', error);
     }
   };
 
@@ -88,7 +85,7 @@ export default function useHome() {
     Papa.parse(response, {
       header: true,
       skipEmptyLines: true,
-      complete: async (result) => {
+      complete: async (result: { data: movie[] }) => {
         const movieData = result.data;
         const moviesWithImages = await fetchMovieImagesBatch(movieData); // Use the service
         setTop10(moviesWithImages);
@@ -106,7 +103,7 @@ export default function useHome() {
   }, [currentPage, currentBestPage]);
 
   // Handle page change
-  const handlePageChange = (page: any) => {
+  const handlePageChange = (page: number) => {
     if (page <= 0) {
       setCurrentPage(1);
     } else if (page >= totalPages) {
@@ -116,7 +113,7 @@ export default function useHome() {
     }
   };
 
-  const handleBest3PageChange = (page: any) => {
+  const handleBest3PageChange = (page: number) => {
     setIsLoading(true);
     if (page <= 0) {
       setCurrentBestPage(0);
@@ -139,18 +136,18 @@ export default function useHome() {
     const itemWidth = (wrapper.firstChild as HTMLElement)?.offsetWidth || 0;
     const scrollAmount = itemWidth * 4;
 
-    if (direction === "left") {
-        wrapper.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth",
-        });
-    } else if (direction === "right") {
-        wrapper.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth",
-        });
+    if (direction === 'left') {
+      wrapper.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth',
+      });
+    } else if (direction === 'right') {
+      wrapper.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
     }
-};
+  };
 
   return {
     t,

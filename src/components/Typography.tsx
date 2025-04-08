@@ -28,7 +28,7 @@ const variantClasses: Record<TypographyProps['variant'], string> = {
 const colorClasses: Record<NonNullable<TypographyProps['color']>, string> = {
   primary: 'text-[#FFFFFF]',
   secondary: 'text-[#000000]',
-  tertiary: 'text-[#00502E]',
+  tertiary: 'text-[#a3a3a3]',
 };
 
 const visibleOnClasses: Record<

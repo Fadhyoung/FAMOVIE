@@ -61,7 +61,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const buttonTypeStyles = {
       solid: `${variantStyles[variant]} text-black`,
-      outline: 'border border-current bg-transparent',
+      outline: 'border border-current',
       subtle: `${variantStyles[variant]} bg-opacity-50`,
       ghost: 'bg-transparent',
       link: 'bg-transparent underline p-0',

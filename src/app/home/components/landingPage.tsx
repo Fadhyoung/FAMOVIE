@@ -14,7 +14,7 @@ export default function LandingPage() {
   const { t } = useHome();
   return (
     <>
-      <div className='w-full h-full p-2 relative grid grid-cols-2 gap-2 justify-center items-center bg-white'>
+      <div className='w-full h-screen min-h-[600] max-h-[1000] p-2 relative grid grid-cols-2 gap-2 justify-center items-center bg-white'>
         {/** FLOAT ORNAMENT */}
         <div className='m-auto absolute bottom-0 left-1/2 p-2 z-20 text-black transform -translate-x-1/2 -translate-y-24'>
           <RiScrollToBottomLine size={40} className='animate-bounce' />
