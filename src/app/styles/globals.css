@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.random {
+  background-color: #a3a3a3;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -68,8 +72,8 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-      "sansa hundredeyes"
-      "sansa bb";
+      "left top-right"
+      "left bottom-right";
   }
 
   .LP_BOTTOM_GRID {
@@ -77,7 +81,7 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-      "vikings rhaeneyra great"
-      "elliot narcos great";
+      "left-top center-top right"
+      "left-bottom center-bottom right";
   }
 }
