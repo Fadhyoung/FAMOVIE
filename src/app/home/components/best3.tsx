@@ -8,6 +8,7 @@ import useHome from '@/app/home/hooks';
 
 export default function Best3() {
   const {
+    t,
     best3: data,
     currentBestPage: currentPage,
     category,
@@ -17,7 +18,7 @@ export default function Best3() {
   } = useHome();
 
   if (isLoading) {
-    <div>Loading..</div>;
+    <div>{t('loading')}</div>;
   }
 
   return (
@@ -45,7 +46,7 @@ export default function Best3() {
                   )
                 }
               >
-                Famovie imdb list <FaExternalLinkAlt />
+                {t('famovieImdbList')}<FaExternalLinkAlt />
               </button>
               <button
                 className="b3-button"
@@ -56,14 +57,14 @@ export default function Best3() {
                   )
                 }
               >
-                Letterbox <FaExternalLinkAlt />
+                {t('letterbox')} <FaExternalLinkAlt />
               </button>
             </div>
             {/** 2ND */}
             <div className="w-1/3 text-center text-black">
-              <p className="text-[14px] font-medium">1st Recomendation</p>
+              <p className="text-[14px] font-medium">{t('firstRecomendation')}</p>
               <h1 className="text-[32px] font-semibold">
-                GETTING TO KNOW WITH MY BEST 3
+                {t('myBest3')}
               </h1>
             </div>
             {/** 3RD */}
@@ -95,7 +96,7 @@ export default function Best3() {
                 <Card1 width={'w-1/3'} height={'h-56'} data={data[2]} />
               </>
             ) : (
-              <p>Loading...</p> // or a skeleton loader component
+              <p>{t('loading')}</p>
             )}
           </div>
           {/** BOTTOM SECTION */}
@@ -107,7 +108,7 @@ export default function Best3() {
               onClick={() => setCurrentPage(0)}
             >
               {' '}
-              Western
+              {t('western')}
             </button>
             <button
               className={`b3-button ${
@@ -116,7 +117,7 @@ export default function Best3() {
               onClick={() => setCurrentPage(1)}
             >
               {' '}
-              Asian
+              {t('asian')}
             </button>
             <button
               className={`b3-button ${
@@ -125,7 +126,7 @@ export default function Best3() {
               onClick={() => setCurrentPage(2)}
             >
               {' '}
-              Movies
+              {t('movies')}
             </button>
             <button
               className={`b3-button ${
@@ -134,7 +135,7 @@ export default function Best3() {
               onClick={() => setCurrentPage(3)}
             >
               {' '}
-              Indonesia
+              {t('indonesian')}
             </button>
           </div>
         </div>
