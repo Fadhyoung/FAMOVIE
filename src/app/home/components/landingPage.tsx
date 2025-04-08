@@ -61,9 +61,7 @@ export default function LandingPage() {
               {t('movieIveWatched')}
             </h1>
             <p className='w-1/3 text-[12px] font-thin text-justify'>
-              Famovie will give you recomendation of all the best series that
-              owener ever watched. this recomendation is for those of you that
-              adore quite much with a few genre below
+              {t('titleDescription')}
             </p>
             <div className='w-2/5 border-b border-dashed border-white'></div>
             <div className='w-1/3 flex flex-wrap gap-2'>
@@ -72,20 +70,20 @@ export default function LandingPage() {
                   key={index}
                   className='px-5 py-2 text-[9px] font-thin rounded-[5px] bg-black-2'
                 >
-                  Genre
+                  {t('genres')}
                 </div>
               ))}
             </div>
           </div>
           {/** DESC 2 */}
           <div className='w-full flex flex-col gap-0 p-10'>
-            <h1 className='text-[20px] font-thin italic'>Game of Thrones</h1>
+            <h1 className='text-[20px] font-thin italic'>{t('gameOfThrones')}</h1>
             <div className='flex gap-2 items-end'>
-              <h1 className='text-[40px] font-thin italic'>9.1</h1>
-              <p className='mb-3 font-thin italic'>imdb rate</p>
+              <h1 className='text-[40px] font-thin italic'>{t('rate')}</h1>
+              <p className='mb-3 font-thin italic'>{t('imdbRating')}</p>
             </div>
             <div className='flex gap-2 items-center'>
-              <p className='font-thin'>My review here</p>
+              <p className='font-thin'>{t('myReviewHere')}</p>
               <HiExternalLink size={30} />
             </div>
           </div>
