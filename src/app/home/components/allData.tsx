@@ -12,7 +12,7 @@ interface AllDataProps {
 
 export default function AllData({ width }: AllDataProps) {
     
-    const {isLoading, data, dropdown, currentPage, totalPages, handlePageChange, handleDropdown} = useHome();
+    const {t, isLoading, data, dropdown, currentPage, totalPages, handlePageChange, handleDropdown} = useHome();
     
     if (isLoading) {
         <div>Loading..</div>
@@ -24,7 +24,7 @@ export default function AllData({ width }: AllDataProps) {
                 {/* Header Section */}
                 <div className="w-full flex justify-between">
                     <button className="flex gap-2 b3-button">
-                        Movies series that I've watched
+                        {t("movieI'veWatched")}
                     </button>
                     <button className="b3-button">
                         <MdOutlineFilterAlt /> Filter

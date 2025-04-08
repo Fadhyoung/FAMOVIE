@@ -6,8 +6,11 @@ import GetMoviesAction, { getBest3MoviesAction, getTop10MoviesAction } from "./a
 import { useEffect, useRef, useState } from "react";
 import { fetchMovieImagesBatch } from "@/app/services/movieService";
 import { movie } from "@/types/movie";
+import { useTranslations } from "next-intl";
 
 export default function useHome() {
+  const t = useTranslations("home");
+
   // All data state
   const [data, setData] = useState<movie[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -150,6 +153,8 @@ export default function useHome() {
 };
 
   return {
+    t,
+
     data,
     isLoading,
     currentPage,
