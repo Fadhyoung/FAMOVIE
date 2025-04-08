@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       'inline-flex items-center justify-center font-medium focus:outline-none transition-all';
 
     const variantStyles = {
-      primary: 'bg-white',
+      primary: 'bg-white text-black',
       secondary: 'bg-primaryGreen text-white',
       tertiary: 'bg-secondaryGreen',
       quartiary: 'bg-tertiaryGreen',
@@ -61,7 +61,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const buttonTypeStyles = {
       solid: `${variantStyles[variant]} text-black`,
-      outline: 'border border-current',
+      outline: 'border border-black text-black',
       subtle: `${variantStyles[variant]} bg-opacity-50`,
       ghost: 'bg-transparent',
       link: 'bg-transparent underline p-0',
@@ -71,10 +71,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const sizeStyles = {
       xs: 'px-2 py-1 text-xs',
-      sm: 'px-3 py-1.5 lg:text-sm xs:text-lg',
-      md: 'px-4 py-2 lg:text-base xs:text-sm',
-      lg: 'lg:px-5 lg:py-3 xs:px-1 xs:py-1 lg:text-lg xs:text-base',
-      xl: 'px-8 py-5 lg:text-xl xs:text-lg',
+      sm: 'xs:px-2 xs:py-1 xs:text-xs lg:px-3 lg:py-1.5 lg:text-sm',
+      md: 'xs:px-3 xs:py-1.5 xs:text-sm lg:px-4 lg:py-2 lg:text-base',
+      lg: 'xs:px-4 xs:py-2 xs:text-base lg:px-5 lg:py-3 lg:text-lg',
+      xl: 'xs:px-5 xs:py-3 xs:text-lg lg:px-8 lg:py-5 lg:text-xl',
     };
 
     const radiusStyles = {

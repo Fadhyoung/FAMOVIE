@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa6';
 import { useTranslations } from 'next-intl';
+import { TITLE } from '@/constants/routers';
 
 interface truncateDescProps {
   text?: string;
@@ -87,7 +88,6 @@ export const Card1 = ({ width, height, data }: CardProps) => {
           </Typography>
         </div>
       </div>
-      `
     </>
   );
 };
@@ -96,7 +96,7 @@ export const Card1 = ({ width, height, data }: CardProps) => {
 export const Card2 = ({ title, desc, poster, url }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="basis-[18%] flex flex-col flex-shrink-0 text-black">
+    <div className="lg:basis-[18%] xs:basis-[70%] flex flex-col flex-shrink-0 text-black">
       <div className="h-96 relative overflow-hidden border border-black">
         <Image
           className="w-full h-full absolute z-20 object-cover"
@@ -123,7 +123,7 @@ export const Card2 = ({ title, desc, poster, url }: CardProps) => {
             radius="lg"
             className="px-3 py-1 text-[12px] font-semibold"
             onClick={() =>
-              window.open('/review', '_blank', 'noopener,noreferrer')
+              window.open(TITLE, '_blank', 'noopener,noreferrer')
             }
           >
             {t('reviewHere')}
@@ -156,7 +156,7 @@ export const Card3 = ({}) => {
 export const Card4 = ({ title, desc, poster }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="basis-[23.5%] h-[400px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
+    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[400px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
       <Image
         className="w-full h-full absolute z-10 object-cover"
         src={poster || '/default-poster.jpg'}
