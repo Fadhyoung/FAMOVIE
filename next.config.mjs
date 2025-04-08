@@ -1,7 +1,7 @@
-import createNextIntlPlugin from "next-intl/plugin";
+import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
 
-const repoName = "FAMOVIE";
+const repoName = 'FAMOVIE';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,6 +10,7 @@ const nextConfig = {
   trailingSlash: true,
   basePath: `/${repoName}`,
   assetPrefix: `/${repoName}`,
+  images: { unoptimized: true },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.

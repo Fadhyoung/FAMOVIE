@@ -1,6 +1,8 @@
 {
   "home": {
-    "movieI'veWatched": "Movie I've Watched",
+    "movieIveWatched": "Movie I've Watched",
+    "famovie": "FAMOVIE",
+    "title": ", Pure subjective here",
     "home": "Home",
     "about": "About",
     "contact": "Contact"
