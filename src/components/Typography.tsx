@@ -6,7 +6,7 @@ export type TypographyProps = {
   type?: 'display' | 'title' | 'subtitle' | 'body' | 'button' | 'overline';
   className?: string;
   children?: React.ReactNode;
-  color?: 'primary' | 'secondary' | 'tertiary';
+  color?: 'primary' | 'secondary' | 'tertiary' | 'link';
   weight?: string;
   styles?: CSSProperties;
   visibleOn?: 'mobile-only' | 'desktop-only' | 'all';
@@ -29,6 +29,7 @@ const colorClasses: Record<NonNullable<TypographyProps['color']>, string> = {
   primary: 'text-[#FFFFFF]',
   secondary: 'text-[#000000]',
   tertiary: 'text-[#a3a3a3]',
+  link: 'text-[#3366CC]',
 };
 
 const visibleOnClasses: Record<

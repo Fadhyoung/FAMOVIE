@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       'inline-flex items-center justify-center font-medium focus:outline-none transition-all';
 
     const variantStyles = {
-      primary: 'bg-white',
+      primary: 'bg-white text-black',
       secondary: 'bg-primaryGreen text-white',
       tertiary: 'bg-secondaryGreen',
       quartiary: 'bg-tertiaryGreen',

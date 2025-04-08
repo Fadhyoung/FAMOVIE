@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa6';
 import { useTranslations } from 'next-intl';
+import { TITLE } from '@/constants/routers';
 
 interface truncateDescProps {
   text?: string;
@@ -123,7 +124,7 @@ export const Card2 = ({ title, desc, poster, url }: CardProps) => {
             radius="lg"
             className="px-3 py-1 text-[12px] font-semibold"
             onClick={() =>
-              window.open('/review', '_blank', 'noopener,noreferrer')
+              window.open(TITLE, '_blank', 'noopener,noreferrer')
             }
           >
             {t('reviewHere')}

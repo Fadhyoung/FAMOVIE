@@ -1404,7 +1404,8 @@ esutils@^2.0.2:
   version "0.1.0"
   dependencies:
     axios "^1.7.9"
-    famovie "file:../../../.cache/yarn/v6/npm-famovie-0.1.0-f2759660-9209-4b3c-aaf6-5a1b577d961c-1744076457795/node_modules/famovie"
+    clsx "^2.1.1"
+    famovie "file:../../../.cache/yarn/v6/npm-famovie-0.1.0-a17c3b0d-7cc0-46ef-aedd-66e386c3e56a-1744086624581/node_modules/famovie"
     next "15.1.0"
     next-intl "^4.0.2"
     papaparse "^5.4.1"
@@ -2124,6 +2125,11 @@ lru-cache@^10.2.0:
   version "10.4.3"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
+
+lucide-react@^0.487.0:
+  version "0.487.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.487.0.tgz#c18a463404e8ef106d46a7c9cceddf9fc8b9ff6b"
+  integrity sha512-aKqhOQ+YmFnwq8dWgGjOuLc8V1R9/c/yOd+zDY4+ohsR2Jo05lSGc3WsstYPIzcTpeosN7LoCkLReUUITvaIvw==
 
 make-dir@^3.0.2:
   version "3.1.0"
