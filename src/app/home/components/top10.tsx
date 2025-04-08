@@ -5,6 +5,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Card2 } from '@/components/Cards';
 import useHome from '@/app/home/hooks';
 import { movie } from '@/types/movie';
+import Button from '@/components/Button';
 
 export default function Top10() {
   const { t, top10: data, scrollWrapperRef, scroll } = useHome();
@@ -15,22 +16,33 @@ export default function Top10() {
       <div className="w-full h-auto pb-5 rounded-b-xl drop-shadow-xl border-b border-black bg-white">
         <div className="w-10/12 m-auto flex flex-col items-start gap-5">
           <div className="w-full flex justify-between">
-            <button className="flex gap-2 b3-button">
+            <Button
+              radius="lg"
+              buttonType="outline"
+              size="md"
+              className="flex gap-4"
+            >
               {t('top10Recommendations')}
-            </button>
+            </Button>
             <div className="w-fit flex gap-2 justify-between">
-              <button
-                className="b3-button cursor-pointer"
+              <Button
+                radius="lg"
+                buttonType="outline"
+                size="md"
+                className="flex gap-4"
                 onClick={() => scroll('left')}
               >
                 <FiChevronLeft />
-              </button>
-              <button
-                className="b3-button dcursor-pointer"
+              </Button>
+              <Button
+                radius="lg"
+                buttonType="outline"
+                size="md"
+                className="flex gap-4"
                 onClick={() => scroll('right')}
               >
                 <FiChevronRight />{' '}
-              </button>
+              </Button>
             </div>
           </div>
           <div

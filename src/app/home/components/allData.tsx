@@ -4,6 +4,7 @@ import { MdOutlineFilterAlt } from 'react-icons/md';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Card4 } from '@/components/Cards';
 import useHome from '@/app/home/hooks';
+import Button from '@/components/Button';
 
 interface AllDataProps {
   width?: string;
@@ -32,12 +33,22 @@ export default function AllData({ width }: AllDataProps) {
       >
         {/* Header Section */}
         <div className="w-full flex justify-between">
-          <button className="flex gap-2 b3-button">
+          <Button
+            radius="lg"
+            buttonType="outline"
+            size="md"
+            className="flex gap-4"
+          >
             {t('movieIveWatched')}
-          </button>
-          <button className="b3-button">
-            <MdOutlineFilterAlt /> Filter
-          </button>
+          </Button>
+          <Button
+            radius="lg"
+            buttonType="outline"
+            size="md"
+            className="flex gap-4"
+          >
+            <MdOutlineFilterAlt /> {t('filter')}
+          </Button>
         </div>
 
         {/* Cards Section */}
@@ -59,32 +70,41 @@ export default function AllData({ width }: AllDataProps) {
         {/* Pagination Section */}
         <div className="flex flex-col gap-2 justify-center items-center">
           <div className="w-full flex justify-center gap-2 mt-4">
-            <button
-              className="b3-button cursor-pointer"
+            <Button
+              radius="lg"
+              buttonType="outline"
+              size="md"
+              className="flex gap-4"
               onClick={() => handlePageChange(currentPage - 1)}
             >
               <FiChevronLeft />
-            </button>
-            <button
+            </Button>
+            <Button
               key={currentPage}
+              radius="lg"
+              buttonType="outline"
+              size="md"
+              className="flex gap-4"
               onClick={handleDropdown}
-              className={'b3-button dcursor-pointer'}
             >
               {currentPage}
-            </button>
-            <button
-              className="b3-button dcursor-pointer"
+            </Button>
+            <Button
+              radius="lg"
+              buttonType="outline"
+              size="md"
+              className="flex gap-4"
               onClick={() => handlePageChange(currentPage + 1)}
             >
               <FiChevronRight />{' '}
-            </button>
+            </Button>
           </div>
 
           {/** DROPDOWN */}
           {dropdown ? (
             <div className="pagination flex overflow-x-scroll border rounded-lg border-black">
               {Array.from({ length: totalPages }, (_, index) => (
-                <button
+                <Button
                   key={`page-${index}`}
                   className={`basis-[20%] p-2 flex-shrink-0 text-[10px] text-black ${
                     index % 2 === 0 ? 'bg-gray-100' : 'bg-white'
@@ -92,7 +112,7 @@ export default function AllData({ width }: AllDataProps) {
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
-                </button>
+                </Button>
               ))}
             </div>
           ) : (
