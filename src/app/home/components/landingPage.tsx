@@ -14,7 +14,10 @@ export default function LandingPage() {
   const { t } = useHome();
   return (
     <>
-      <div className="w-full h-screen min-h-[600] max-h-[1000] p-2 relative grid lg:grid-cols-2 xs:grid-cols-1 gap-2 justify-center items-center bg-white">
+      <div
+        className="w-full h-screen p-2 relative grid lg:grid-cols-2 xs:grid-cols-1 gap-2 justify-center items-center bg-white"
+        style={{ maxHeight: '1000px', minHeight: '600px' }}
+      >
         {/** FLOAT ORNAMENT */}
         <div className="m-auto absolute bottom-0 left-1/2 p-2 z-20 lg:text-black xs:text-white transform -translate-x-1/2 lg:-translate-y-24 xs:-translate-y-10">
           <RiScrollToBottomLine size={40} className="animate-bounce" />
@@ -68,12 +71,7 @@ export default function LandingPage() {
             <div className="lg:w-2/5 xs:w-full border-b border-dashed border-white"></div>
             <div className="lg:w-1/3 xs:w-full flex flex-wrap gap-2">
               {[...Array(6)].map((_, index) => (
-                <Button
-                  key={index}
-                  size='md'
-                  variant='secondary'
-                  disabled
-                >
+                <Button key={index} size="md" variant="secondary" disabled>
                   {t('genres')}
                 </Button>
               ))}
@@ -102,13 +100,14 @@ export default function LandingPage() {
               radius="lg"
               variant="primary"
               buttonType="solid"
-              size='lg'
-              className='w-fit flex gap-2'
+              size="lg"
+              className="w-fit flex gap-2"
               onClick={() =>
                 window.open(
                   'https://fadhyoung.github.io/Portofolio1/',
                   '_blank'
-                )}
+                )
+              }
             >
               {t('visitMyWebsite')} <FaExternalLinkAlt size={20} />
             </Button>
