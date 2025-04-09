@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function HomeComponent() {
   return (
     <>
-      <div className="lg:w-full xs:w-fit max-w-[2000px] m-auto flex flex-col gap-10 justify-center items-center bg-white">
+      <div className="lg:w-full xs:w-fit max-w-[2000px] m-auto flex flex-col gap-20 justify-center items-center bg-white">
         <LandingPage />
 
         <Best3 />
