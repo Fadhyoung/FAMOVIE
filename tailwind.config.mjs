@@ -19,5 +19,8 @@ export default {
       },
     },
   },
+  safelist: [
+    'max-h-[1000]',
+  ],
   plugins: [],
 };
