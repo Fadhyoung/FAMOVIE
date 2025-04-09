@@ -1,14 +1,13 @@
 'use client';
 
 import React from 'react';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Card2 } from '@/components/Cards';
+import { ReviewCards } from '@/components/Cards';
 import useHome from '@/app/home/hooks';
 import { movie } from '@/types/movie';
 import Button from '@/components/Button';
 
-export default function Top10() {
-  const { t, top10: data, scrollWrapperRef, scroll } = useHome();
+export default function ReviewSection() {
+  const { t, reviewedData: data, scrollWrapperRef} = useHome();
 
   return (
     <>
@@ -23,33 +22,13 @@ export default function Top10() {
           >
             {t('top10Recommendations')}
           </Button>
-          <div className="w-fit flex gap-2 justify-between">
-            <Button
-              radius="lg"
-              buttonType="outline"
-              size="md"
-              className="flex gap-4"
-              onClick={() => scroll('left')}
-            >
-              <FiChevronLeft />
-            </Button>
-            <Button
-              radius="lg"
-              buttonType="outline"
-              size="md"
-              className="flex gap-4"
-              onClick={() => scroll('right')}
-            >
-              <FiChevronRight />{' '}
-            </Button>
-          </div>
         </div>
         <div
-          className="w-full flex gap-8 overflow-x-scroll snap-x"
+          className="w-full flex flex-col gap-8 overflow-x-scroll snap-x"
           ref={scrollWrapperRef}
         >
           {data.map((item: movie, index: number) => (
-            <Card2
+            <ReviewCards
               key={index}
               title={item.Title}
               desc={item.Plot}

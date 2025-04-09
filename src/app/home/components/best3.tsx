@@ -32,8 +32,8 @@ export default function Best3() {
         <div className="w-full lg:px-16 xs:px-2 py-10 relative flex flex-col gap-5 justify-center items-center overflow-hidden rounded-b-[38px] text-black ">
           {/** DECORATION */}
           <div className="w-full h-full absolute -z-30 bg-white"></div>
-          <div className="w-[1644px] h-[1644px] absolute -z-10 -bottom-[1000] rounded-full border border-white-2"></div>
-          <div className="w-[1100px] h-[1100px] absolute -z-20 -bottom-[625] rounded-full bg-white-2"></div>
+          <div className="w-[1644px] h-[1644px] absolute -z-10 -bottom-[1100] rounded-full border border-darkBlue"></div>
+          <div className="w-[1100px] h-[1100px] absolute -z-20 -bottom-[725] rounded-full bg-radial from-midBlue to-darkBlue"></div>
 
           {/** TOP SECTION */}
           <div className="w-full flex lg:flex-row xs:flex-col lg:gap-20 xs:gap-5 justify-between">
@@ -72,10 +72,10 @@ export default function Best3() {
             </div>
             {/** 2ND */}
             <div className="lg:w-1/3 xs:w-full flex flex-col items-center text-center text-black">
-              <Typography variant="sm" weight="400" color="secondary">
+              <Typography type='subtitle' weight="400" color="primary">
                 {t('firstRecomendation')}
               </Typography>
-              <Typography variant="2xl" weight="700" color="secondary">
+              <Typography type='title' weight="700" color="primary">
                 {t('myBest3')}
               </Typography>
             </div>
@@ -83,6 +83,7 @@ export default function Best3() {
             <div className="lg:w-1/3 xs:w-full lg:flex xs:hidden flex-col items-end gap-2">
               <div className="w-fit flex gap-2 justify-between">
                 <Button
+                  variant='primary'
                   radius="lg"
                   buttonType="outline"
                   size="md"
@@ -122,7 +123,7 @@ export default function Best3() {
                 ))}
               </>
             ) : (
-              <Typography variant='lg'>{t('loading')}</Typography>
+              <Typography type='subtitle'>{t('loading')}</Typography>
             )}
           </div>
           {/** BOTTOM SECTION */}

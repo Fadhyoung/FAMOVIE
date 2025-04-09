@@ -44,6 +44,7 @@ body::-webkit-scrollbar {
 
 /* width */
 ::-webkit-scrollbar {
+  display: none;
   width:4px; height:4px;
 }
 

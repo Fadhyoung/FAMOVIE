@@ -9,9 +9,15 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        darkBlue: '#0D2237',
+        amber: '#FF8E2B',
+        midBlue: '#2E75AB',
       },
       screens: {
         xs: '300px',

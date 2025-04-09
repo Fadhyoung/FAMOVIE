@@ -45,8 +45,9 @@ export const fetchMovieImagesBatch = async (movieData: movie[]) => {
   const requests = movieData.map(async (movie: movie) => {
     const id = movie['Const']; // Assuming column 1 is the movie ID (e.g., tt11198330)
     const url = movie['URL'];
+    const reviewed = String(movie['Reviewed']) === 'true';
     const data = await fetchMovieImage2(id);
-    return { ...data, URL: url }; // Attach the image URL to the movie object
+    return { ...data, Reviewed: reviewed, URL: url }; // Attach the image URL to the movie object
   });
 
   return Promise.all(requests); // Wait for all requests to complete
