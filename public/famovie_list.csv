@@ -1,74 +1,74 @@
-Position,Const,Created,Modified,Description,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
-1,tt0944947,2024-06-15,2024-06-15,"complete","Game of Thrones","Game of Thrones",https://www.imdb.com/title/tt0944947/,TV Series,9.2,60,2011,"Action, Adventure, Drama, Fantasy",2374339,2011-04-17,,10,2024-11-19
-2,tt11198330,2024-06-15,2024-08-09,"Season 2","House of the Dragon","House of the Dragon",https://www.imdb.com/title/tt11198330/,TV Series,8.3,50,2022,"Action, Adventure, Drama, Fantasy, Romance",456734,2022-08-21,,10,2024-11-19
-3,tt7366338,2024-06-15,2024-06-15,"complete","Chernobyl","Chernobyl",https://www.imdb.com/title/tt7366338/,TV Mini Series,9.3,60,2019,"Drama, History, Thriller",912354,2019-05-06,,10,2024-11-19
-4,tt6611916,2024-06-15,2024-06-15,"complete","Kingdom","Kingdom",https://www.imdb.com/title/tt6611916/,TV Series,8.3,45,2019,"Action, Drama, Horror, Thriller",57189,2019-01-25,,10,2024-11-19
-5,tt0903747,2024-06-15,2024-06-15,"complete","Breaking Bad","Breaking Bad",https://www.imdb.com/title/tt0903747/,TV Series,9.5,45,2008,"Crime, Drama, Thriller",2246585,2008-01-20,,10,2024-11-19
-6,tt3006802,2024-06-15,2024-06-15,"Season 7","Outlander","Outlander",https://www.imdb.com/title/tt3006802/,TV Series,8.3,60,2014,"Adventure, Drama, Fantasy, Romance",184978,2014-08-09,,10,2024-11-19
-7,tt2306299,2024-06-15,2024-10-30,"Done","Vikings","Vikings",https://www.imdb.com/title/tt2306299/,TV Series,8.5,45,2013,"Action, Adventure, Drama, History, Romance, War",603849,2013-03-03,,9,2024-11-19
-8,tt0120737,2024-08-06,2024-08-06,,"The Lord of the Rings: The Fellowship of the Ring","The Lord of the Rings: The Fellowship of the Ring",https://www.imdb.com/title/tt0120737/,Movie,8.9,178,2001,"Adventure, Drama, Fantasy",2065180,2001-12-19,"Peter Jackson",,
-9,tt0167261,2024-08-06,2024-08-06,,"The Lord of the Rings: The Two Towers","The Lord of the Rings: The Two Towers",https://www.imdb.com/title/tt0167261/,Movie,8.8,179,2002,"Adventure, Drama, Fantasy",1835479,2002-12-18,"Peter Jackson",,
-10,tt0167260,2024-08-06,2024-08-06,,"The Lord of the Rings: The Return of the King","The Lord of the Rings: The Return of the King",https://www.imdb.com/title/tt0167260/,Movie,9.0,201,2003,"Adventure, Drama, Fantasy",2035583,2003-12-17,"Peter Jackson",,
-11,tt0372784,2024-08-06,2024-08-06,,"Batman Begins","Batman Begins",https://www.imdb.com/title/tt0372784/,Movie,8.2,140,2005,"Action, Drama",1617317,2005-06-15,"Christopher Nolan",10,2024-11-19
-12,tt0468569,2024-08-06,2024-08-06,,"The Dark Knight","The Dark Knight",https://www.imdb.com/title/tt0468569/,Movie,9.0,152,2008,"Action, Crime, Drama, Thriller",2955356,2008-07-18,"Christopher Nolan",10,2024-11-19
-13,tt1345836,2024-08-06,2024-08-06,,"The Dark Knight Rises","The Dark Knight Rises",https://www.imdb.com/title/tt1345836/,Movie,8.4,164,2012,"Action, Drama, Thriller",1877303,2012-07-20,"Christopher Nolan",10,2024-11-19
-14,tt0816692,2024-08-09,2024-08-09,,"Interstellar","Interstellar",https://www.imdb.com/title/tt0816692/,Movie,8.7,169,2014,"Adventure, Drama, Sci-Fi",2219387,2014-11-07,"Christopher Nolan",10,2024-11-19
-15,tt2788316,2024-06-15,2024-10-30,"Done","Shōgun","Shogun",https://www.imdb.com/title/tt2788316/,TV Series,8.6,60,2024,"Adventure, Drama, History, War",190545,2024-02-27,,8,2024-11-19
-16,tt4179452,2024-06-15,2024-10-30,"Done","The Last Kingdom","The Last Kingdom",https://www.imdb.com/title/tt4179452/,TV Series,8.5,60,2015,"Action, Drama, History",173352,2015-10-10,,7,2024-11-19
-17,tt15767808,2024-08-06,2024-10-30,"Done","The Last Kingdom: Seven Kings Must Die","Seven Kings Must Die",https://www.imdb.com/title/tt15767808/,Movie,6.9,117,2023,"Action, Drama, History",38815,2023-04-14,"Edward Bazalgette",7,2024-11-19
-18,tt7949218,2024-06-15,2024-10-30,"Done","See","See",https://www.imdb.com/title/tt7949218/,TV Series,7.6,60,2019,"Action, Drama, Sci-Fi",102119,2019-11-01,,7,2024-11-19
-19,tt1190634,2024-06-15,2024-08-09,"Season 4","The Boys","The Boys",https://www.imdb.com/title/tt1190634/,TV Series,8.7,60,2019,"Action, Comedy, Crime, Drama, Sci-Fi",741145,2019-07-26,,8,2024-11-19
-20,tt0363771,2024-08-06,2024-08-06,,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe","The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",https://www.imdb.com/title/tt0363771/,Movie,6.9,143,2005,"Adventure, Family, Fantasy",437026,2005-12-09,"Andrew Adamson",,
-21,tt0499448,2024-08-06,2024-08-06,,"The Chronicles of Narnia: Prince Caspian","The Chronicles of Narnia: Prince Caspian",https://www.imdb.com/title/tt0499448/,Movie,6.5,150,2008,"Action, Adventure, Family, Fantasy",229654,2008-05-16,"Andrew Adamson",,
-22,tt0980970,2024-08-06,2024-08-06,,"The Chronicles of Narnia: The Voyage of the Dawn Treader","The Chronicles of Narnia: The Voyage of the Dawn Treader",https://www.imdb.com/title/tt0980970/,Movie,6.3,113,2010,"Adventure, Family, Fantasy",169736,2010-12-10,"Michael Apted",,
-23,tt0133093,2024-08-06,2024-08-06,,"The Matrix","The Matrix",https://www.imdb.com/title/tt0133093/,Movie,8.7,136,1999,"Action, Sci-Fi",2110658,1999-03-31,"Lana Wachowski, Lilly Wachowski",,
-24,tt5180504,2024-06-15,2024-06-15,"Season 3","The Witcher","The Witcher",https://www.imdb.com/title/tt5180504/,TV Series,8.0,60,2019,"Action, Adventure, Drama, Fantasy, Mystery",585792,2019-12-20,,8,2024-11-19
-25,tt22187798,2024-06-15,2024-11-25,"Spooky - Season 1","Gannibal","Gannibal",https://www.imdb.com/title/tt22187798/,TV Series,7.4,45,2022,"Drama, Horror, Sci-Fi, Thriller",1880,2022-12-28,,9,2024-11-19
-26,tt6468322,2024-06-15,2024-11-25,"Crazy - Done","Money Heist","La casa de papel",https://www.imdb.com/title/tt6468322/,TV Series,8.2,60,2017,"Action, Crime, Drama, Mystery, Thriller",553960,2017-05-02,,9,2024-11-19
-27,tt10919420,2024-06-15,2024-11-25,"Crazy - Season 1","Squid Game","Ojing-eo geim",https://www.imdb.com/title/tt10919420/,TV Series,8.0,60,2021,"Action, Drama, Mystery, Thriller",581190,2021-09-17,,9,2024-11-19
-28,tt2707408,2024-08-06,2024-11-25,"Crazy - Done","Narcos","Narcos",https://www.imdb.com/title/tt2707408/,TV Series,8.7,50,2015,"Biography, Crime, Drama, Thriller",487094,2015-08-28,,10,2024-11-19
-29,tt10795658,2024-06-15,2024-06-15,,"Alice in Borderland","Imawa no Kuni no Arisu",https://www.imdb.com/title/tt10795658/,TV Series,7.7,50,2020,"Drama, Mystery, Sci-Fi, Thriller",103811,2020-12-10,,7,2024-11-19
-30,tt2235759,2024-08-06,2024-11-19,"hiilarious - Done","The Great","The Great",https://www.imdb.com/title/tt2235759/,TV Series,8.1,52,2020,"Biography, Comedy, Drama, History",57204,2020-05-15,,9,2024-11-19
-31,tt13159924,2024-08-06,2024-11-19,"hiilarious - Season 1","Gen V","Gen V",https://www.imdb.com/title/tt13159924/,TV Series,7.7,50,2023,"Action, Adventure, Comedy, Drama, Sci-Fi",115011,2023-09-29,,7,2024-11-19
-32,tt4786824,2024-06-15,2024-06-15,"Season 1","The Crown","The Crown",https://www.imdb.com/title/tt4786824/,TV Series,8.6,60,2016,"Biography, Drama, History",264971,2016-11-04,,8,2024-11-19
-33,tt10986410,2024-06-15,2024-11-19,"Fun - Done","Ted Lasso","Ted Lasso",https://www.imdb.com/title/tt10986410/,TV Series,8.8,30,2020,"Comedy, Drama, Sport",376702,2020-08-14,,10,2024-11-19
-34,tt4158110,2024-10-30,2024-11-19,"Crazy - Done","Mr. Robot","Mr. Robot",https://www.imdb.com/title/tt4158110/,TV Series,8.5,45,2015,"Crime, Drama, Thriller",431278,2015-06-24,,9,2024-11-19
-35,tt11737520,2024-08-06,2024-08-09,"Season 1","One Piece","One Piece",https://www.imdb.com/title/tt11737520/,TV Series,8.3,60,2023,"Action, Adventure, Comedy, Drama, Fantasy",164804,2023-08-31,,10,2024-11-19
-36,tt2442560,2024-06-15,2024-10-30,"Done","Peaky Blinders","Peaky Blinders",https://www.imdb.com/title/tt2442560/,TV Series,8.7,60,2013,"Crime, Drama",685976,2014-09-30,,9,2024-11-19
-37,tt1745960,2024-11-25,2024-11-25,,"Top Gun: Maverick","Top Gun: Maverick",https://www.imdb.com/title/tt1745960/,Movie,8.2,130,2022,"Action, Drama",744466,2022-05-27,"Joseph Kosinski",,
-38,tt0374463,2024-09-14,2024-10-30,"Done","The Pacific","The Pacific",https://www.imdb.com/title/tt0374463/,TV Mini Series,8.3,53,2010,"Action, Adventure, Drama, History, War",135219,2010-03-14,,8,2024-11-19
-39,tt5296406,2024-06-15,2024-06-15,"Season 1","Designated Survivor","Designated Survivor",https://www.imdb.com/title/tt5296406/,TV Series,7.4,60,2016,"Action, Drama, Mystery, Thriller",108424,2016-09-21,,7,2024-11-19
-40,tt10405394,2024-06-15,2024-06-15,,"Designated Survivor: 60 Days","60 Il, Jijeongsaengjonja",https://www.imdb.com/title/tt10405394/,TV Series,8.1,70,2019,"Drama, Thriller",1921,2019-07-01,,,
-41,tt12867810,2024-06-15,2024-06-15,,"Start-Up","Seutateueob",https://www.imdb.com/title/tt12867810/,TV Series,8.0,80,2020,"Comedy, Drama, Romance",16042,2020-10-17,,,
-42,tt7094780,2024-06-15,2024-06-15,,"Mr. Sunshine","Miseuteo Shunshain",https://www.imdb.com/title/tt7094780/,TV Series,8.7,80,2018,"Action, Drama, Romance, War",11231,2018-07-07,,,
-43,tt4301160,2024-08-06,2024-08-06,,"Black Bird","Black Bird",https://www.imdb.com/title/tt4301160/,TV Mini Series,8.1,58,2022,"Biography, Crime, Drama, Mystery, Thriller",116931,2022-07-08,,,
-44,tt1837492,2024-06-15,2024-06-15,"Season 2","13 Reasons Why","13 Reasons Why",https://www.imdb.com/title/tt1837492/,TV Series,7.5,60,2017,"Drama, Mystery, Thriller",323337,2017-03-31,,,
-45,tt9772814,2024-06-15,2024-06-15,,"Kill It","Kill It",https://www.imdb.com/title/tt9772814/,TV Series,7.7,60,2019,"Drama, Mystery, Thriller",1412,2019-03-23,,,
-46,tt14169960,2024-06-15,2024-08-09,"Season 1","All of Us Are Dead","Jigeum uri hakgyoneun",https://www.imdb.com/title/tt14169960/,TV Series,7.5,60,2022,"Action, Drama, Fantasy, Horror, Sci-Fi, Thriller",72624,2022-01-28,,,
-47,tt19854762,2024-06-15,2024-06-15,"Season 1","Hijack","Hijack",https://www.imdb.com/title/tt19854762/,TV Series,7.4,47,2023,"Drama, Thriller",77324,2023-06-28,,,
-48,tt13433812,2024-06-15,2024-06-15,,"Vincenzo","Binsenjo",https://www.imdb.com/title/tt13433812/,TV Series,8.4,80,2021,"Action, Comedy, Crime, Drama",31649,2021-02-20,,,
-49,tt26672563,2024-06-15,2024-06-15,,"Duty After School","Banggwa Hoo Jeonjaenghwaldong",https://www.imdb.com/title/tt26672563/,TV Mini Series,6.8,,2023,"Sci-Fi, Thriller",2482,2023-03-31,,,
-50,tt10262630,2024-06-15,2024-06-15,,"Extracurricular","Extracurricular",https://www.imdb.com/title/tt10262630/,TV Series,7.6,50,2020,"Crime, Drama",10118,2020-04-29,,,
-51,tt11052470,2024-06-15,2024-06-15,,"Move to Heaven","Move to Heaven",https://www.imdb.com/title/tt11052470/,TV Mini Series,8.5,60,2021,"Drama",10370,2021-05-14,,,
-52,tt9642982,2024-11-25,2024-11-25,,"Belgravia","Belgravia",https://www.imdb.com/title/tt9642982/,TV Mini Series,7.5,,2020,"Drama, Romance",9412,2020-04-12,,,
-53,tt9794044,2024-06-15,2024-06-15,,"Citadel","Citadel",https://www.imdb.com/title/tt9794044/,TV Series,6.2,41,2023,"Action, Drama, Thriller",35954,2023-04-28,,,
-54,tt20600022,2024-06-15,2024-06-15,,"The Worst of Evil","Choeakui Ak",https://www.imdb.com/title/tt20600022/,TV Series,8.3,,2023,"Action, Crime, Drama, Thriller",5462,2023-09-27,,,
-55,tt9335498,2024-06-15,2024-08-09,"Hashira Training","Demon Slayer: Kimetsu no Yaiba","Kimetsu no Yaiba",https://www.imdb.com/title/tt9335498/,TV Series,8.6,24,2019,"Animation, Action, Adventure, Fantasy, Thriller",172708,2021-01-22,,,
-56,tt8523042,2024-06-15,2024-06-15,,"Vagabond","Baegabondeu",https://www.imdb.com/title/tt8523042/,TV Series,8.1,60,2019,"Action, Mystery, Thriller",12571,2020-11-03,,,
-57,tt22263470,2024-06-15,2024-06-15,,"Revenant","Akgwi",https://www.imdb.com/title/tt22263470/,TV Series,7.9,60,2023,"Drama, Fantasy, Horror, Mystery, Thriller",3266,2023-06-23,,,
-58,tt15026724,2024-06-15,2024-06-15,,"Our Beloved Summer","Geu hae urineun",https://www.imdb.com/title/tt15026724/,TV Series,8.2,70,2021,"Drama, Romance",11319,2021-12-06,,,
-59,tt9266592,2024-06-15,2024-06-15,,"The Crowned Clown","Wang-i doin nam-ja",https://www.imdb.com/title/tt9266592/,TV Series,8.0,80,2019,"Drama, History, Romance",1599,2019-01-07,,,
-60,tt26225038,2024-06-15,2024-06-15,,"Death's Game","Yijae, Got Jookseummida",https://www.imdb.com/title/tt26225038/,TV Series,8.5,60,2023,"Drama, Fantasy",15579,2023-12-15,,,
-61,tt27458539,2024-06-15,2024-06-15,,"Vigilante","Bijillante",https://www.imdb.com/title/tt27458539/,TV Series,7.7,50,2023,"Action, Crime, Thriller",3014,2023-11-08,,,
-62,tt12940504,2024-06-15,2024-06-15,,"My Name","Mai Neim",https://www.imdb.com/title/tt12940504/,TV Series,7.8,50,2021,"Action, Crime, Drama, Mystery, Thriller",35536,2021-10-15,,,
-63,tt8888462,2024-06-15,2024-06-15,,"Pachinko","Pachinko",https://www.imdb.com/title/tt8888462/,TV Series,8.4,55,2022,"Drama",15039,2022-03-25,,,
-64,tt10850888,2024-06-15,2024-06-15,,"My Country: The New Age","Naui Nara",https://www.imdb.com/title/tt10850888/,TV Series,8.1,80,2019,"Action, Drama, History, Romance",2795,2019-10-04,,,
-65,tt7817966,2024-06-15,2024-06-15,,"Are You Human Too?","Neodo Inganini",https://www.imdb.com/title/tt7817966/,TV Series,7.9,35,2018,"Comedy, Drama, Romance, Sci-Fi",3219,2018-06-04,,,
-66,tt14979052,2024-06-15,2024-06-15,,"Happiness","Haepiniseu",https://www.imdb.com/title/tt14979052/,TV Series,7.8,65,2021,"Action, Fantasy, Horror, Thriller",11539,2021-11-05,,,
-67,tt9319668,2024-10-17,2024-10-17,,"1899","1899",https://www.imdb.com/title/tt9319668/,TV Series,7.3,60,2022,"Drama, Horror, Mystery, Sci-Fi",113264,2022-11-17,,,
-68,tt2189461,2024-12-09,2024-12-09,,"Marco Polo","Marco Polo",https://www.imdb.com/title/tt2189461/,TV Series,8.0,60,2014,"Action, Adventure, Drama, History",80644,2014-12-12,,,
-69,tt22352854,2024-12-09,2024-12-09,,"Gyeongseong Creature","Gyeongseong Keuricheo",https://www.imdb.com/title/tt22352854/,TV Series,7.3,60,2023,"Action, Drama, History, Horror, Mystery, Thriller",13650,2023-12-22,,,
-70,tt9059760,2024-06-15,2024-06-15,,"Normal People","Normal People",https://www.imdb.com/title/tt9059760/,TV Mini Series,8.4,28,2020,"Drama, Romance",99583,2020-04-29,,,
-71,tt1563738,2024-08-06,2024-08-06,,"One Day","One Day",https://www.imdb.com/title/tt1563738/,Movie,7.0,107,2011,"Drama, Romance",172367,2011-08-19,"Lone Scherfig",,
-72,tt13991232,2024-09-09,2024-09-09,,"1883","1883",https://www.imdb.com/title/tt13991232/,TV Mini Series,8.7,60,2021,"Drama, Western",126143,2021-12-19,,,
-73,tt32600458,2024-12-09,2024-12-09,,"Sacchan, Boku wa.","Sacchan, Boku wa.",https://www.imdb.com/title/tt32600458/,TV Series,5.5,30,2024,"Drama, Romance",72,2024-06-11,,,
+Position,Const,Created,Modified,Description,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated,Reviewed
+1,tt0944947,2024-06-15,2024-06-15,"complete","Game of Thrones","Game of Thrones",https://www.imdb.com/title/tt0944947/,TV Series,9.2,60,2011,"Action, Adventure, Drama, Fantasy",2374339,2011-04-17,,10,2024-11-19,true
+2,tt11198330,2024-06-15,2024-08-09,"Season 2","House of the Dragon","House of the Dragon",https://www.imdb.com/title/tt11198330/,TV Series,8.3,50,2022,"Action, Adventure, Drama, Fantasy, Romance",456734,2022-08-21,,10,2024-11-19,true
+3,tt7366338,2024-06-15,2024-06-15,"complete","Chernobyl","Chernobyl",https://www.imdb.com/title/tt7366338/,TV Mini Series,9.3,60,2019,"Drama, History, Thriller",912354,2019-05-06,,10,2024-11-19,false
+4,tt6611916,2024-06-15,2024-06-15,"complete","Kingdom","Kingdom",https://www.imdb.com/title/tt6611916/,TV Series,8.3,45,2019,"Action, Drama, Horror, Thriller",57189,2019-01-25,,10,2024-11-19,false
+5,tt0903747,2024-06-15,2024-06-15,"complete","Breaking Bad","Breaking Bad",https://www.imdb.com/title/tt0903747/,TV Series,9.5,45,2008,"Crime, Drama, Thriller",2246585,2008-01-20,,10,2024-11-19,false
+6,tt3006802,2024-06-15,2024-06-15,"Season 7","Outlander","Outlander",https://www.imdb.com/title/tt3006802/,TV Series,8.3,60,2014,"Adventure, Drama, Fantasy, Romance",184978,2014-08-09,,10,2024-11-19,false
+7,tt2306299,2024-06-15,2024-10-30,"Done","Vikings","Vikings",https://www.imdb.com/title/tt2306299/,TV Series,8.5,45,2013,"Action, Adventure, Drama, History, Romance, War",603849,2013-03-03,,9,2024-11-19,false
+8,tt0120737,2024-08-06,2024-08-06,,"The Lord of the Rings: The Fellowship of the Ring","The Lord of the Rings: The Fellowship of the Ring",https://www.imdb.com/title/tt0120737/,Movie,8.9,178,2001,"Adventure, Drama, Fantasy",2065180,2001-12-19,"Peter Jackson",,,false
+9,tt0167261,2024-08-06,2024-08-06,,"The Lord of the Rings: The Two Towers","The Lord of the Rings: The Two Towers",https://www.imdb.com/title/tt0167261/,Movie,8.8,179,2002,"Adventure, Drama, Fantasy",1835479,2002-12-18,"Peter Jackson",,,false
+10,tt0167260,2024-08-06,2024-08-06,,"The Lord of the Rings: The Return of the King","The Lord of the Rings: The Return of the King",https://www.imdb.com/title/tt0167260/,Movie,9.0,201,2003,"Adventure, Drama, Fantasy",2035583,2003-12-17,"Peter Jackson",,,false
+11,tt0372784,2024-08-06,2024-08-06,,"Batman Begins","Batman Begins",https://www.imdb.com/title/tt0372784/,Movie,8.2,140,2005,"Action, Drama",1617317,2005-06-15,"Christopher Nolan",10,2024-11-19,false
+12,tt0468569,2024-08-06,2024-08-06,,"The Dark Knight","The Dark Knight",https://www.imdb.com/title/tt0468569/,Movie,9.0,152,2008,"Action, Crime, Drama, Thriller",2955356,2008-07-18,"Christopher Nolan",10,2024-11-19,false
+13,tt1345836,2024-08-06,2024-08-06,,"The Dark Knight Rises","The Dark Knight Rises",https://www.imdb.com/title/tt1345836/,Movie,8.4,164,2012,"Action, Drama, Thriller",1877303,2012-07-20,"Christopher Nolan",10,2024-11-19,false
+14,tt0816692,2024-08-09,2024-08-09,,"Interstellar","Interstellar",https://www.imdb.com/title/tt0816692/,Movie,8.7,169,2014,"Adventure, Drama, Sci-Fi",2219387,2014-11-07,"Christopher Nolan",10,2024-11-19,false
+15,tt2788316,2024-06-15,2024-10-30,"Done","Shōgun","Shogun",https://www.imdb.com/title/tt2788316/,TV Series,8.6,60,2024,"Adventure, Drama, History, War",190545,2024-02-27,,8,2024-11-19,false
+16,tt4179452,2024-06-15,2024-10-30,"Done","The Last Kingdom","The Last Kingdom",https://www.imdb.com/title/tt4179452/,TV Series,8.5,60,2015,"Action, Drama, History",173352,2015-10-10,,7,2024-11-19,false
+17,tt15767808,2024-08-06,2024-10-30,"Done","The Last Kingdom: Seven Kings Must Die","Seven Kings Must Die",https://www.imdb.com/title/tt15767808/,Movie,6.9,117,2023,"Action, Drama, History",38815,2023-04-14,"Edward Bazalgette",7,2024-11-19,false
+18,tt7949218,2024-06-15,2024-10-30,"Done","See","See",https://www.imdb.com/title/tt7949218/,TV Series,7.6,60,2019,"Action, Drama, Sci-Fi",102119,2019-11-01,,7,2024-11-19,false
+19,tt1190634,2024-06-15,2024-08-09,"Season 4","The Boys","The Boys",https://www.imdb.com/title/tt1190634/,TV Series,8.7,60,2019,"Action, Comedy, Crime, Drama, Sci-Fi",741145,2019-07-26,,8,2024-11-19,false
+20,tt0363771,2024-08-06,2024-08-06,,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe","The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",https://www.imdb.com/title/tt0363771/,Movie,6.9,143,2005,"Adventure, Family, Fantasy",437026,2005-12-09,"Andrew Adamson",,,false
+21,tt0499448,2024-08-06,2024-08-06,,"The Chronicles of Narnia: Prince Caspian","The Chronicles of Narnia: Prince Caspian",https://www.imdb.com/title/tt0499448/,Movie,6.5,150,2008,"Action, Adventure, Family, Fantasy",229654,2008-05-16,"Andrew Adamson",,,false
+22,tt0980970,2024-08-06,2024-08-06,,"The Chronicles of Narnia: The Voyage of the Dawn Treader","The Chronicles of Narnia: The Voyage of the Dawn Treader",https://www.imdb.com/title/tt0980970/,Movie,6.3,113,2010,"Adventure, Family, Fantasy",169736,2010-12-10,"Michael Apted",,,false
+23,tt0133093,2024-08-06,2024-08-06,,"The Matrix","The Matrix",https://www.imdb.com/title/tt0133093/,Movie,8.7,136,1999,"Action, Sci-Fi",2110658,1999-03-31,"Lana Wachowski, Lilly Wachowski",,,false
+24,tt5180504,2024-06-15,2024-06-15,"Season 3","The Witcher","The Witcher",https://www.imdb.com/title/tt5180504/,TV Series,8.0,60,2019,"Action, Adventure, Drama, Fantasy, Mystery",585792,2019-12-20,,8,2024-11-19,false
+25,tt22187798,2024-06-15,2024-11-25,"Spooky - Season 1","Gannibal","Gannibal",https://www.imdb.com/title/tt22187798/,TV Series,7.4,45,2022,"Drama, Horror, Sci-Fi, Thriller",1880,2022-12-28,,9,2024-11-19,false
+26,tt6468322,2024-06-15,2024-11-25,"Crazy - Done","Money Heist","La casa de papel",https://www.imdb.com/title/tt6468322/,TV Series,8.2,60,2017,"Action, Crime, Drama, Mystery, Thriller",553960,2017-05-02,,9,2024-11-19,false
+27,tt10919420,2024-06-15,2024-11-25,"Crazy - Season 1","Squid Game","Ojing-eo geim",https://www.imdb.com/title/tt10919420/,TV Series,8.0,60,2021,"Action, Drama, Mystery, Thriller",581190,2021-09-17,,9,2024-11-19,false
+28,tt2707408,2024-08-06,2024-11-25,"Crazy - Done","Narcos","Narcos",https://www.imdb.com/title/tt2707408/,TV Series,8.7,50,2015,"Biography, Crime, Drama, Thriller",487094,2015-08-28,,10,2024-11-19,false
+29,tt10795658,2024-06-15,2024-06-15,,"Alice in Borderland","Imawa no Kuni no Arisu",https://www.imdb.com/title/tt10795658/,TV Series,7.7,50,2020,"Drama, Mystery, Sci-Fi, Thriller",103811,2020-12-10,,7,2024-11-19,false
+30,tt2235759,2024-08-06,2024-11-19,"hiilarious - Done","The Great","The Great",https://www.imdb.com/title/tt2235759/,TV Series,8.1,52,2020,"Biography, Comedy, Drama, History",57204,2020-05-15,,9,2024-11-19,false
+31,tt13159924,2024-08-06,2024-11-19,"hiilarious - Season 1","Gen V","Gen V",https://www.imdb.com/title/tt13159924/,TV Series,7.7,50,2023,"Action, Adventure, Comedy, Drama, Sci-Fi",115011,2023-09-29,,7,2024-11-19,false
+32,tt4786824,2024-06-15,2024-06-15,"Season 1","The Crown","The Crown",https://www.imdb.com/title/tt4786824/,TV Series,8.6,60,2016,"Biography, Drama, History",264971,2016-11-04,,8,2024-11-19,false
+33,tt10986410,2024-06-15,2024-11-19,"Fun - Done","Ted Lasso","Ted Lasso",https://www.imdb.com/title/tt10986410/,TV Series,8.8,30,2020,"Comedy, Drama, Sport",376702,2020-08-14,,10,2024-11-19,false
+34,tt4158110,2024-10-30,2024-11-19,"Crazy - Done","Mr. Robot","Mr. Robot",https://www.imdb.com/title/tt4158110/,TV Series,8.5,45,2015,"Crime, Drama, Thriller",431278,2015-06-24,,9,2024-11-19,false
+35,tt11737520,2024-08-06,2024-08-09,"Season 1","One Piece","One Piece",https://www.imdb.com/title/tt11737520/,TV Series,8.3,60,2023,"Action, Adventure, Comedy, Drama, Fantasy",164804,2023-08-31,,10,2024-11-19,false
+36,tt2442560,2024-06-15,2024-10-30,"Done","Peaky Blinders","Peaky Blinders",https://www.imdb.com/title/tt2442560/,TV Series,8.7,60,2013,"Crime, Drama",685976,2014-09-30,,9,2024-11-19,false
+37,tt1745960,2024-11-25,2024-11-25,,"Top Gun: Maverick","Top Gun: Maverick",https://www.imdb.com/title/tt1745960/,Movie,8.2,130,2022,"Action, Drama",744466,2022-05-27,"Joseph Kosinski",,,false
+38,tt0374463,2024-09-14,2024-10-30,"Done","The Pacific","The Pacific",https://www.imdb.com/title/tt0374463/,TV Mini Series,8.3,53,2010,"Action, Adventure, Drama, History, War",135219,2010-03-14,,8,2024-11-19,false
+39,tt5296406,2024-06-15,2024-06-15,"Season 1","Designated Survivor","Designated Survivor",https://www.imdb.com/title/tt5296406/,TV Series,7.4,60,2016,"Action, Drama, Mystery, Thriller",108424,2016-09-21,,7,2024-11-19,false
+40,tt10405394,2024-06-15,2024-06-15,,"Designated Survivor: 60 Days","60 Il, Jijeongsaengjonja",https://www.imdb.com/title/tt10405394/,TV Series,8.1,70,2019,"Drama, Thriller",1921,2019-07-01,,,,false
+41,tt12867810,2024-06-15,2024-06-15,,"Start-Up","Seutateueob",https://www.imdb.com/title/tt12867810/,TV Series,8.0,80,2020,"Comedy, Drama, Romance",16042,2020-10-17,,,,false
+42,tt7094780,2024-06-15,2024-06-15,,"Mr. Sunshine","Miseuteo Shunshain",https://www.imdb.com/title/tt7094780/,TV Series,8.7,80,2018,"Action, Drama, Romance, War",11231,2018-07-07,,,,false
+43,tt4301160,2024-08-06,2024-08-06,,"Black Bird","Black Bird",https://www.imdb.com/title/tt4301160/,TV Mini Series,8.1,58,2022,"Biography, Crime, Drama, Mystery, Thriller",116931,2022-07-08,,,,false
+44,tt1837492,2024-06-15,2024-06-15,"Season 2","13 Reasons Why","13 Reasons Why",https://www.imdb.com/title/tt1837492/,TV Series,7.5,60,2017,"Drama, Mystery, Thriller",323337,2017-03-31,,,,false
+45,tt9772814,2024-06-15,2024-06-15,,"Kill It","Kill It",https://www.imdb.com/title/tt9772814/,TV Series,7.7,60,2019,"Drama, Mystery, Thriller",1412,2019-03-23,,,,false
+46,tt14169960,2024-06-15,2024-08-09,"Season 1","All of Us Are Dead","Jigeum uri hakgyoneun",https://www.imdb.com/title/tt14169960/,TV Series,7.5,60,2022,"Action, Drama, Fantasy, Horror, Sci-Fi, Thriller",72624,2022-01-28,,,,false
+47,tt19854762,2024-06-15,2024-06-15,"Season 1","Hijack","Hijack",https://www.imdb.com/title/tt19854762/,TV Series,7.4,47,2023,"Drama, Thriller",77324,2023-06-28,,,,false
+48,tt13433812,2024-06-15,2024-06-15,,"Vincenzo","Binsenjo",https://www.imdb.com/title/tt13433812/,TV Series,8.4,80,2021,"Action, Comedy, Crime, Drama",31649,2021-02-20,,,,false
+49,tt26672563,2024-06-15,2024-06-15,,"Duty After School","Banggwa Hoo Jeonjaenghwaldong",https://www.imdb.com/title/tt26672563/,TV Mini Series,6.8,,2023,"Sci-Fi, Thriller",2482,2023-03-31,,,,false
+50,tt10262630,2024-06-15,2024-06-15,,"Extracurricular","Extracurricular",https://www.imdb.com/title/tt10262630/,TV Series,7.6,50,2020,"Crime, Drama",10118,2020-04-29,,,,false
+51,tt11052470,2024-06-15,2024-06-15,,"Move to Heaven","Move to Heaven",https://www.imdb.com/title/tt11052470/,TV Mini Series,8.5,60,2021,"Drama",10370,2021-05-14,,,,false
+52,tt9642982,2024-11-25,2024-11-25,,"Belgravia","Belgravia",https://www.imdb.com/title/tt9642982/,TV Mini Series,7.5,,2020,"Drama, Romance",9412,2020-04-12,,,,false
+53,tt9794044,2024-06-15,2024-06-15,,"Citadel","Citadel",https://www.imdb.com/title/tt9794044/,TV Series,6.2,41,2023,"Action, Drama, Thriller",35954,2023-04-28,,,,false
+54,tt20600022,2024-06-15,2024-06-15,,"The Worst of Evil","Choeakui Ak",https://www.imdb.com/title/tt20600022/,TV Series,8.3,,2023,"Action, Crime, Drama, Thriller",5462,2023-09-27,,,,false
+55,tt9335498,2024-06-15,2024-08-09,"Hashira Training","Demon Slayer: Kimetsu no Yaiba","Kimetsu no Yaiba",https://www.imdb.com/title/tt9335498/,TV Series,8.6,24,2019,"Animation, Action, Adventure, Fantasy, Thriller",172708,2021-01-22,,,,false
+56,tt8523042,2024-06-15,2024-06-15,,"Vagabond","Baegabondeu",https://www.imdb.com/title/tt8523042/,TV Series,8.1,60,2019,"Action, Mystery, Thriller",12571,2020-11-03,,,,false
+57,tt22263470,2024-06-15,2024-06-15,,"Revenant","Akgwi",https://www.imdb.com/title/tt22263470/,TV Series,7.9,60,2023,"Drama, Fantasy, Horror, Mystery, Thriller",3266,2023-06-23,,,,false
+58,tt15026724,2024-06-15,2024-06-15,,"Our Beloved Summer","Geu hae urineun",https://www.imdb.com/title/tt15026724/,TV Series,8.2,70,2021,"Drama, Romance",11319,2021-12-06,,,,false
+59,tt9266592,2024-06-15,2024-06-15,,"The Crowned Clown","Wang-i doin nam-ja",https://www.imdb.com/title/tt9266592/,TV Series,8.0,80,2019,"Drama, History, Romance",1599,2019-01-07,,,,false
+60,tt26225038,2024-06-15,2024-06-15,,"Death's Game","Yijae, Got Jookseummida",https://www.imdb.com/title/tt26225038/,TV Series,8.5,60,2023,"Drama, Fantasy",15579,2023-12-15,,,,false
+61,tt27458539,2024-06-15,2024-06-15,,"Vigilante","Bijillante",https://www.imdb.com/title/tt27458539/,TV Series,7.7,50,2023,"Action, Crime, Thriller",3014,2023-11-08,,,,false
+62,tt12940504,2024-06-15,2024-06-15,,"My Name","Mai Neim",https://www.imdb.com/title/tt12940504/,TV Series,7.8,50,2021,"Action, Crime, Drama, Mystery, Thriller",35536,2021-10-15,,,,false
+63,tt8888462,2024-06-15,2024-06-15,,"Pachinko","Pachinko",https://www.imdb.com/title/tt8888462/,TV Series,8.4,55,2022,"Drama",15039,2022-03-25,,,,false
+64,tt10850888,2024-06-15,2024-06-15,,"My Country: The New Age","Naui Nara",https://www.imdb.com/title/tt10850888/,TV Series,8.1,80,2019,"Action, Drama, History, Romance",2795,2019-10-04,,,,false
+65,tt7817966,2024-06-15,2024-06-15,,"Are You Human Too?","Neodo Inganini",https://www.imdb.com/title/tt7817966/,TV Series,7.9,35,2018,"Comedy, Drama, Romance, Sci-Fi",3219,2018-06-04,,,,false
+66,tt14979052,2024-06-15,2024-06-15,,"Happiness","Haepiniseu",https://www.imdb.com/title/tt14979052/,TV Series,7.8,65,2021,"Action, Fantasy, Horror, Thriller",11539,2021-11-05,,,,false
+67,tt9319668,2024-10-17,2024-10-17,,"1899","1899",https://www.imdb.com/title/tt9319668/,TV Series,7.3,60,2022,"Drama, Horror, Mystery, Sci-Fi",113264,2022-11-17,,,,false
+68,tt2189461,2024-12-09,2024-12-09,,"Marco Polo","Marco Polo",https://www.imdb.com/title/tt2189461/,TV Series,8.0,60,2014,"Action, Adventure, Drama, History",80644,2014-12-12,,,,false
+69,tt22352854,2024-12-09,2024-12-09,,"Gyeongseong Creature","Gyeongseong Keuricheo",https://www.imdb.com/title/tt22352854/,TV Series,7.3,60,2023,"Action, Drama, History, Horror, Mystery, Thriller",13650,2023-12-22,,,,false
+70,tt9059760,2024-06-15,2024-06-15,,"Normal People","Normal People",https://www.imdb.com/title/tt9059760/,TV Mini Series,8.4,28,2020,"Drama, Romance",99583,2020-04-29,,,,false
+71,tt1563738,2024-08-06,2024-08-06,,"One Day","One Day",https://www.imdb.com/title/tt1563738/,Movie,7.0,107,2011,"Drama, Romance",172367,2011-08-19,"Lone Scherfig",,,false
+72,tt13991232,2024-09-09,2024-09-09,,"1883","1883",https://www.imdb.com/title/tt13991232/,TV Mini Series,8.7,60,2021,"Drama, Western",126143,2021-12-19,,,,false
+73,tt32600458,2024-12-09,2024-12-09,,"Sacchan, Boku wa.","Sacchan, Boku wa.",https://www.imdb.com/title/tt32600458/,TV Series,5.5,30,2024,"Drama, Romance",72,2024-06-11,,,,false

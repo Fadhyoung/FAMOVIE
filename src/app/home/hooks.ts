@@ -22,12 +22,7 @@ export default function useHome() {
 
   // Best 3 state
   const [best3, setBest3] = useState<movie[]>([]); // Data for the current page
-  const category = [
-    'Western',
-    'Asian',
-    'Movies',
-    'Indonesia',
-  ];
+  const category = ['Western', 'Asian', 'Movies', 'Indonesia'];
   const [currentBestPage, setCurrentBestPage] = useState(0);
 
   // Top 10 state
@@ -37,8 +32,13 @@ export default function useHome() {
   const [dropdown, setDropdown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Review state
+  const [reviewedData, setReviewedData] = useState<movie[]>([]);
+  const limitData = 3;
+
   const fetchMoview = async (page: number) => {
     const response = await GetMoviesAction();
+    console.log('response result:', response);
     Papa.parse(response, {
       header: true,
       skipEmptyLines: true,
@@ -56,6 +56,12 @@ export default function useHome() {
 
         const moviesWithImages = await fetchMovieImagesBatch(pageData);
         setData(moviesWithImages);
+        
+        const reviewedMovies = moviesWithImages
+          .filter((movie) => movie.Reviewed === true)
+          .slice(0, limitData);
+        console.log('reviewedMovies result', reviewedMovies);
+        setReviewedData(reviewedMovies);
       },
     });
   };
@@ -63,11 +69,13 @@ export default function useHome() {
   // Function to fetch specific page data
   const fetchBest3 = async (currentCategory: string) => {
     try {
-      const response = await getBest3MoviesAction();      
+      const response = await getBest3MoviesAction();
       Papa.parse(response, {
         header: true,
         skipEmptyLines: true,
-        complete: async (result: { data: (movie & { Category: string })[] }) => {
+        complete: async (result: {
+          data: (movie & { Category: string })[];
+        }) => {
           const allData = result.data.filter(
             (item) => item.Category === currentCategory
           );
@@ -167,6 +175,9 @@ export default function useHome() {
     top10,
     scrollWrapperRef,
     scroll,
+
+    // Reviewed
+    reviewedData,
 
     dropdown,
     totalPages,

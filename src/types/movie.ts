@@ -19,4 +19,5 @@ export interface movie {
   YourRating: number | null;
   DateRated: Date | null;
   Category: string;
+  Reviewed: boolean;
 }

@@ -25,7 +25,7 @@ export default function AllData() {
   return (
     <>
       <div
-        className="lg:w-3/4 xs:w-full m-auto flex flex-col items-center justify-center gap-5"
+        className="w-full m-auto flex flex-col items-center justify-center gap-5"
       >
         {/* Header Section */}
         <div className="w-full flex justify-between">
@@ -33,7 +33,7 @@ export default function AllData() {
             radius="lg"
             buttonType="outline"
             size="md"
-            className="flex gap-4"
+            className="flex gap-4 !text-midBlue"
           >
             {t('movieIveWatched')}
           </Button>
@@ -49,7 +49,7 @@ export default function AllData() {
 
         {/* Cards Section */}
         <div
-          className={`w-full flex items-center flex-wrap ${
+          className={`w-full flex items-center overflow-x-hidden ${
             data.length < 4 ? 'justify-start' : 'justify-between'
           }`}
         >

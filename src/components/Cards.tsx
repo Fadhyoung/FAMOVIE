@@ -3,9 +3,19 @@ import Typography from '@/components/Typography';
 import { movie } from '@/types/movie';
 import Image from 'next/image';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import {
+  CiShare2,
+  CiHeart,
+  CiBookmark,
+  CiFlag1,
+  CiChat1,
+  CiStar,
+} from 'react-icons/ci';
 import { FaStar } from 'react-icons/fa6';
 import { useTranslations } from 'next-intl';
 import { TITLE } from '@/constants/routers';
+import Avatar from '@/components/Avatar';
+import { PiThumbsUpThin } from 'react-icons/pi';
 
 interface truncateDescProps {
   text?: string;
@@ -49,38 +59,38 @@ export const Card1 = ({ width, height, data }: CardProps) => {
         />
         <div className="basis-[60%] p-5 flex flex-col items-start justify-between">
           <div className="w-full flex justify-between items-center">
-            <div className="flex gap-2 items-start text-[20px] text-amber-300">
-              <Typography variant="2xl" color="secondary">
+            <div className="flex gap-2 items-center text-amber">
+              <Typography type="title" color="tertiary">
                 {data?.imdbRating}
               </Typography>
               <FaStar size={25} />
             </div>
             <Button onClick={() => window.open(data?.URL, '_blank')}>
-              <FaExternalLinkAlt size={25} />
+              <FaExternalLinkAlt size={25} className="text-midBlue" />
             </Button>
           </div>
 
           <div className="w-full flex flex-col">
             <Typography
-              variant="xl"
+              type="subtitle"
               weight="600"
               className="w-full"
-              color="secondary"
+              color="primary"
             >
               {data?.Title}
             </Typography>
             <Typography
-              variant="sm"
+              type="body"
               weight="400"
               className="w-full text-justify"
-              color="secondary"
+              color="primary"
             >
               {truncateDesc({ text: data?.Plot, wordLimit: 15 })}
             </Typography>
           </div>
 
           <Typography
-            variant="xs"
+            type="caption"
             color="tertiary"
             className="w-full flex flex-nowrap overflow-hidden"
           >
@@ -96,8 +106,8 @@ export const Card1 = ({ width, height, data }: CardProps) => {
 export const Card2 = ({ title, desc, poster, url }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="lg:basis-[18%] xs:basis-[70%] flex flex-col flex-shrink-0 text-black">
-      <div className="h-96 relative overflow-hidden border border-black">
+    <div className="lg:basis-[22.5%] xs:basis-[70%] flex flex-col flex-shrink-0 border border-midBlue rounded-b-2xl">
+      <div className="h-96 relative overflow-hidden">
         <Image
           className="w-full h-full absolute z-20 object-cover"
           src={poster || '/default-poster.jpg'}
@@ -105,32 +115,33 @@ export const Card2 = ({ title, desc, poster, url }: CardProps) => {
           layout="fill"
           objectFit="cover"
         />
-        <Button className="absolute z-40 bottom-4 right-4 text-white">
-          {' '}
-          <FaExternalLinkAlt size={20} />{' '}
+        <Button
+          buttonType="ghost"
+          className="absolute z-40 bottom-4 right-4 text-white"
+        >
+          <FaExternalLinkAlt size={20} />
         </Button>
       </div>
-      <div className="p-2 flex flex-col gap-2">
-        <Typography variant="xl" color="secondary">
+      <div className="p-4 flex flex-col gap-2">
+        <Typography type="subtitle" weight="600" color="primary" uppercase>
           {truncateDesc({ text: title, wordLimit: 4 })}
         </Typography>
-        <Typography variant="sm" color="secondary">
+        <Typography type="caption" color="primary">
           {truncateDesc({ text: desc, wordLimit: 10 })}
         </Typography>
         <div className="flex gap-2">
           <Button
+            variant="primary"
             buttonType="outline"
             radius="lg"
-            className="px-3 py-1 text-[12px] font-semibold"
-            onClick={() =>
-              window.open(TITLE, '_blank', 'noopener,noreferrer')
-            }
+            className="px-3 py-1 text-[12px] font-medium !border-midBlue"
+            onClick={() => window.open(TITLE, '_blank', 'noopener,noreferrer')}
           >
-            {t('reviewHere')}
+            {t('review')}
           </Button>
           <Button
             buttonType="ghost"
-            className="px-3 py-1 text-[12px] font-semibold"
+            className="px-3 py-1 text-[12px] font-semibold text-midBlue"
             onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
           >
             {t('imdb')}
@@ -141,13 +152,74 @@ export const Card2 = ({ title, desc, poster, url }: CardProps) => {
   );
 };
 
-// Used at actor and ph
-export const Card3 = ({}) => {
+// Used at the review section
+export const ReviewCards = ({ title, desc, poster }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="w-40 flex flex-col gap-2">
-      <div className="h-40 rounded-[10px] bg-gray-400"></div>
-      <Typography variant="lg">{t('name')}</Typography>
+    <div className="w-full pb-10 flex flex-shrink-0 border-b border-darkBlue">
+      <div className="w-56 h-full relative overflow-hidden">
+        <Image
+          className="w-full h-full object-cover"
+          src={poster || '/default-poster.jpg'}
+          alt={title || 'Poster'}
+          layout="fill"
+          objectFit="cover"
+        />
+        <Button
+          buttonType="ghost"
+          className="absolute z-40 bottom-4 right-4 text-white"
+        >
+          <FaExternalLinkAlt size={20} />
+        </Button>
+      </div>
+      <div className="w-full px-10 py-5 flex flex-col gap-5">
+        <Typography type="title" weight="600" color="primary">
+          {truncateDesc({ text: title, wordLimit: 4 })}
+        </Typography>
+        <Typography type="body" color="primary">
+          {truncateDesc({ text: desc, wordLimit: 30 })}
+        </Typography>
+        <div className="w-full flex justify-between items-center text-midBlue">
+          <div className='flex gap-5 items-center'>
+            <Typography type="body" color="tertiary">
+              wednesday, March 20, 2024
+            </Typography>
+            <Typography type='body' color='tertiary' className='flex gap-2'>
+              <CiChat1 size={20} /> 2k
+              <CiStar size={20} /> 100k
+              <PiThumbsUpThin size={20} /> 60k
+            </Typography>
+          </div>
+          <div className="flex gap-5">
+            <CiShare2 size={20} />
+            <CiHeart size={20} />
+            <CiBookmark size={20} />
+            <CiFlag1 size={20} />
+          </div>
+        </div>
+        <div className="flex gap-5 items-center">
+          <Avatar
+            id="user-123"
+            size="md"
+            color="bg-blue-500"
+            username="John Doe"
+            imageUrl="https://i.pravatar.cc/300"
+            alt="John's Avatar"
+          />
+          <div>
+            <Typography type="subtitle">Sansa Stark</Typography>
+            <Typography type="subtitle" className='flex items-center'><CiStar size={20} className='text-amber' />/5.0</Typography>
+          </div>
+          <Button
+            variant="tertiary"
+            radius="lg"
+            className="px-3 py-1 text-[12px] font-medium !border-midBlue"
+            onClick={() => window.open(TITLE, '_blank', 'noopener,noreferrer')}
+          >
+            {t('review')}
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
@@ -156,7 +228,7 @@ export const Card3 = ({}) => {
 export const Card4 = ({ title, desc, poster }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[400px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
+    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[450px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
       <Image
         className="w-full h-full absolute z-10 object-cover"
         src={poster || '/default-poster.jpg'}
@@ -165,58 +237,19 @@ export const Card4 = ({ title, desc, poster }: CardProps) => {
         objectFit="cover"
       />
       <div className="w-full h-3/4 absolute bottom-0 z-20 bg-gradient-to-t from-black to-transparent"></div>
-      <div className="w-full p-3 absolute bottom-0 z-30 flex flex-col gap-1">
-        <Typography variant="lg" weight="600" color="primary">
+      <div className="w-full p-3 absolute bottom-0 z-30 flex flex-col gap-2">
+        <Typography type="subtitle" weight="1000" color="secondary" uppercase>
           {title}
         </Typography>
-        <Typography variant="sm" weight="400" color="primary">
-          {truncateDesc({ text: desc, wordLimit: 10 })}
+        <Typography type="caption" color="secondary">
+          {truncateDesc({ text: desc, wordLimit: 12 })}
         </Typography>
         <Button
           buttonType="solid"
-          variant="primary"
+          variant="secondary"
           radius="lg"
-          className="flex gap-4"
+          className="flex justify-between gap-4"
         >
-          {t('reviewHere')} <FaExternalLinkAlt />{' '}
-        </Button>
-      </div>
-    </div>
-  );
-};
-
-// TEST CARD
-export const Card5 = ({ title, desc, poster }: CardProps) => {
-  const t = useTranslations('card');
-
-  const truncateDesc = ({ text, wordLimit }: truncateDescProps) => {
-    if (text === undefined) {
-      text = 'Undetected';
-    }
-    const words = text.split(' ');
-    return words.length > (wordLimit || 0)
-      ? words.slice(0, wordLimit).join(' ') + '...'
-      : text;
-  };
-
-  return (
-    <div className="basis-[23%] h-[550px] flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden">
-      <Image
-        className="w-full h-full absolute z-10 object-cover"
-        src={poster || '/default-poster.jpg'}
-        alt={title || 'Poster'}
-        layout="fill"
-        objectFit="cover"
-      />
-      <div className="w-full h-full absolute bottom-0 z-20 bg-gradient-to-t from-black to-transparent"></div>
-      <div className="w-full p-5 absolute bottom-0 z-30 flex flex-col justify-between gap-2">
-        <Typography variant='lg' weight='600' color='primary' className="flex flex-nowrap">
-          {title}
-        </Typography>
-        <Typography variant='sm' weight='500' color='primary' className="text-justify">
-          {truncateDesc({ text: desc, wordLimit: 15 })}
-        </Typography>
-        <Button className="py-2 px-6 flex justify-between gap-2 items-center text-[12px] font-semibold text-black border rounded-[20px] border-white bg-white">
           {t('reviewHere')} <FaExternalLinkAlt />{' '}
         </Button>
       </div>

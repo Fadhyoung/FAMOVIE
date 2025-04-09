@@ -19,10 +19,10 @@ export default function LandingPage() {
         style={{ maxHeight: '1000px', minHeight: '600px' }}
       >
         {/** FLOAT ORNAMENT */}
-        <div className="m-auto absolute bottom-0 left-1/2 p-2 z-20 lg:text-black xs:text-white transform -translate-x-1/2 lg:-translate-y-24 xs:-translate-y-10">
+        <div className="m-auto absolute lg:bottom-32 xs:bottom-16 left-1/2 p-2 z-20 lg:text-black xs:text-white transform -translate-x-1/2">
           <RiScrollToBottomLine size={40} className="animate-bounce" />
         </div>
-        <div className="lg:block xs:hidden w-52 pb-3 absolute bottom-0 left-1/2 p-2 z-30 text-black transform -translate-x-1/2">
+        <div className="lg:block xs:hidden w-56 pb-5 absolute bottom-0 left-1/2 p-2 z-30 text-black transform -translate-x-1/2">
           <Image
             className="w-full object-cover"
             src="/FAMOVIE/images/FullLogo.png"
@@ -43,7 +43,7 @@ export default function LandingPage() {
             height={1080}
           />
           {/** DECORATION */}
-          <div className="w-96 h-96 absolute -z-10 -left-16 -bottom-32 flex justify-center items-center rounded-full border border-white">
+          <div className="w-96 h-96 scale-150 absolute -z-10 -left-10 -bottom-20 flex justify-center items-center rounded-full border border-white">
             <div className="w-72 h-72 rounded-full border border-dashed border-white"></div>
           </div>
 
@@ -58,11 +58,17 @@ export default function LandingPage() {
           </div>
           {/** DESC 1 */}
           <div className="w-full p-10 flex flex-col gap-3 justify-start">
-            <Typography variant="4xl" weight="700">
-              {t('famovie')}
-            </Typography>
+            <div className="flex flex-col">
+              <Typography type="display" weight="100" italic>
+                {t('welcomeTo')}
+              </Typography>
+              <Typography type="massiveTitle">{t('famovie')}</Typography>
+              <Typography type="display" weight="100" italic>
+                {t('subjective')}
+              </Typography>
+            </div>
             <Typography
-              variant="md"
+              type='body'
               weight="500"
               className="lg:w-1/2 xs:w-full"
             >
@@ -71,7 +77,12 @@ export default function LandingPage() {
             <div className="lg:w-2/5 xs:w-full border-b border-dashed border-white"></div>
             <div className="lg:w-1/3 xs:w-full flex flex-wrap gap-2">
               {[...Array(6)].map((_, index) => (
-                <Button key={index} size="md" variant="secondary" disabled>
+                <Button
+                  key={index}
+                  size="md"
+                  variant="tertiary"
+                  buttonType="solid"
+                >
                   {t('genres')}
                 </Button>
               ))}
@@ -79,14 +90,14 @@ export default function LandingPage() {
           </div>
           {/** DESC 2 */}
           <div className="w-full flex flex-col lg:items-start xs:items-center gap-2 p-10">
-            <Typography variant="2xl" weight="700">
+            <Typography type='title' variant='accent' italic>
               {t('gameOfThrones')}
             </Typography>
             <div className="flex gap-2 items-center">
-              <Typography variant="xl" weight="700">
+              <Typography type='title'>
                 {t('rate')}
               </Typography>
-              <Typography variant="md" weight="400" className="italic">
+              <Typography type='subtitle' italic>
                 {t('imdbRating')}
               </Typography>
             </div>
@@ -101,7 +112,7 @@ export default function LandingPage() {
               variant="primary"
               buttonType="solid"
               size="lg"
-              className="w-fit flex gap-2"
+              className="!text-amber"
               onClick={() =>
                 window.open(
                   'https://fadhyoung.github.io/Portofolio1/',
@@ -109,7 +120,8 @@ export default function LandingPage() {
                 )
               }
             >
-              {t('visitMyWebsite')} <FaExternalLinkAlt size={20} />
+              {t('visitMyWebsite')}{' '}
+              <FaExternalLinkAlt size={20} className="text-midBlue" />
             </Button>
           </div>
         </div>

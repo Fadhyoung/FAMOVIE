@@ -2,34 +2,50 @@ import { default as React, CSSProperties, forwardRef } from 'react';
 import clsx from 'clsx';
 
 export type TypographyProps = {
-  variant: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
-  type?: 'display' | 'title' | 'subtitle' | 'body' | 'button' | 'overline';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'muted' | 'highlight' | 'danger' | 'accent';
+  type: 'display' | 'massiveTitle' | 'title' | 'cardtitle' | 'subtitle' | 'body' | 'caption' | 'button' | 'overline' | 'link';
   className?: string;
   children?: React.ReactNode;
-  color?: 'primary' | 'secondary' | 'tertiary' | 'link';
+  color?: 'primary' | 'secondary' | 'tertiary' | 'muted' | 'highlight' | 'danger' | 'accent';
   weight?: string;
   styles?: CSSProperties;
   visibleOn?: 'mobile-only' | 'desktop-only' | 'all';
   id?: string;
+  italic?: boolean;
+  uppercase?: boolean;
 };
 
-const variantClasses: Record<TypographyProps['variant'], string> = {
-  '2xs': 'lg:text-[0.625rem] xs:text-[0.375rem]',
-  xs: 'lg:text-[0.75rem] xs:text-[0.5rem]',
-  sm: 'lg:text-[0.875rem] xs:text-[0.625rem]',
-  md: 'lg:text-[1rem] xs:text-[0.75rem]',
-  lg: 'lg:text-[1.25rem] xs:text-[1rem]',
-  xl: 'lg:text-[1.5rem] xs:text-[1.25rem]',
-  '2xl': 'lg:text-[1.875rem] xs:text-[1.5rem]',
-  '3xl': 'lg:text-[2.125rem] xs:text-[1.5rem]',
-  '4xl': 'lg:text-[6rem] xs:text-[2.25rem]',
+const variantClasses: Record<NonNullable<TypographyProps['variant']>, string> = {
+  primary: 'text-black',
+  secondary: 'text-white',
+  tertiary: 'text-midBlue',
+  muted: 'text-gray-400 italic',
+  highlight: 'bg-yellow-100 text-yellow-800 px-1',
+  danger: 'text-red-600 font-semibold',
+  accent: 'text-amber',
+};
+
+const typeClasses: Record<TypographyProps['type'], string> = {
+  display: 'lg:text-6xl xs:text-4xl font-bold tracking-tighter leading-none',
+  massiveTitle: 'lg:text-9xl xs:text-5xl font-bold tracking-tight leading-none',
+  title: 'lg:text-3xl xs:text-xl font-semibold leading-snug',
+  cardtitle: 'lg:text-2xl xs:text-xl font-semibold leading-snug',
+  subtitle: 'lg:text-lg xs:text-base font-medium leading-relaxed',
+  body: 'lg:text-base xs:text-sm font-normal leading-relaxed',
+  caption: 'lg:text-sm xs:text-xs leading-snug',
+  button: 'lg:text-sm xs:text-xs uppercase tracking-wide font-semibold leading-none',
+  overline: 'lg:text-xs xs:text-[0.625rem] uppercase tracking-widest font-medium',
+  link: 'lg:text-base xs:text-sm underline font-medium hover:text-blue-800 transition-colors duration-200',
 };
 
 const colorClasses: Record<NonNullable<TypographyProps['color']>, string> = {
-  primary: 'text-[#FFFFFF]',
-  secondary: 'text-[#000000]',
-  tertiary: 'text-[#a3a3a3]',
-  link: 'text-[#3366CC]',
+  primary: 'text-darkBlue',
+  secondary: 'text-white',
+  tertiary: 'text-midBlue',
+  muted: 'text-gray-400 italic',
+  highlight: 'bg-yellow-100 text-yellow-800 px-1',
+  danger: 'text-red-600 font-semibold',
+  accent: 'text-amber',
 };
 
 const visibleOnClasses: Record<
@@ -45,13 +61,16 @@ const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
   (
     {
       variant,
+      type,
       className = '',
       children,
-      color = 'primary',
+      color,
       weight,
       styles,
       id,
       visibleOn = 'all',
+      italic,
+      uppercase,
     },
     ref
   ) => {
@@ -60,10 +79,13 @@ const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
         id={id}
         ref={ref}
         className={clsx(
-          variantClasses[variant],
-          colorClasses[color],
+          variant && variantClasses[variant],
+          typeClasses[type],
+          color && colorClasses[color],
           visibleOnClasses[visibleOn],
-          className
+          className,
+          italic ? 'italic' : '',
+          uppercase ? 'uppercase': ''
         )}
         style={{ color, fontWeight: weight, ...styles }}
       >
