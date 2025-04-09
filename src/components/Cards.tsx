@@ -228,7 +228,7 @@ export const ReviewCards = ({ title, desc, poster }: CardProps) => {
 export const Card4 = ({ title, desc, poster }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[450px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
+    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[450px] flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
       <Image
         className="w-full h-full absolute z-10 object-cover"
         src={poster || '/default-poster.jpg'}

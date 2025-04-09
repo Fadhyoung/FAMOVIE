@@ -15,7 +15,7 @@ export const CoverButton = ({ area, alt, img }: OpenLinkButtonProps1) => {
       className="w-full h-full relative overflow-hidden "
       style={{ gridArea: area }}
     >
-      <Typography variant='xs' color='primary' className='absolute z-10 bottom-2 right-2'>
+      <Typography type='caption' color='secondary' className='absolute z-10 bottom-2 right-2' italic>
         {alt}
       </Typography>
       <div className="w-full h-full absolute top-0 hover:scale-125 transition-all duration-300">

@@ -25,15 +25,12 @@ export default function Best3() {
 
   return (
     <>
-      <div
-        className="w-11/12 m-auto rounded-b-[40px] drop-shadow-xl bg-gradient-to-t from-black to-transparent"
-        style={{ padding: '1px' }}
-      >
-        <div className="w-full lg:px-16 xs:px-2 py-10 relative flex flex-col gap-5 justify-center items-center overflow-hidden rounded-b-[38px] text-black ">
+      <div className="w-11/12 m-auto rounded-b-[40px] drop-shadow-xl">
+        <div className="w-full lg:px-16 xs:px-2 py-20 relative flex flex-col gap-5 justify-center items-center overflow-hidden rounded-b-[38px] text-black">
           {/** DECORATION */}
           <div className="w-full h-full absolute -z-30 bg-white"></div>
-          <div className="w-[1644px] h-[1644px] absolute -z-10 -bottom-[1100] rounded-full border border-darkBlue"></div>
-          <div className="w-[1100px] h-[1100px] absolute -z-20 -bottom-[725] rounded-full bg-radial from-midBlue to-darkBlue"></div>
+          <div className="w-[1644px] h-[1644px] absolute -z-10 -bottom-[1075] rounded-full border border-darkBlue"></div>
+          <div className="w-[1100px] h-[1100px] absolute -z-20 -bottom-[700] rounded-full bg-radial from-midBlue to-darkBlue"></div>
 
           {/** TOP SECTION */}
           <div className="w-full flex lg:flex-row xs:flex-col lg:gap-20 xs:gap-5 justify-between">

@@ -25,7 +25,7 @@ export default function AllData() {
   return (
     <>
       <div
-        className="w-full m-auto flex flex-col items-center justify-center gap-5"
+        className="w-full m-auto flex flex-col items-start justify-center gap-5"
       >
         {/* Header Section */}
         <div className="w-full flex justify-between">
@@ -49,7 +49,7 @@ export default function AllData() {
 
         {/* Cards Section */}
         <div
-          className={`w-full flex items-center overflow-x-hidden ${
+          className={`w-full flex gap-5 items-center overflow-x-hidden ${
             data.length < 4 ? 'justify-start' : 'justify-between'
           }`}
         >
