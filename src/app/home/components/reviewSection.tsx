@@ -7,7 +7,7 @@ import { movie } from '@/types/movie';
 import Button from '@/components/Button';
 
 export default function ReviewSection() {
-  const { t, top10: data, scrollWrapperRef} = useHome();
+  const { t, reviewedData: data, scrollWrapperRef} = useHome();
 
   return (
     <>
