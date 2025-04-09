@@ -96,8 +96,8 @@ export const Card1 = ({ width, height, data }: CardProps) => {
 export const Card2 = ({ title, desc, poster, url }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="lg:basis-[18%] xs:basis-[70%] flex flex-col flex-shrink-0 text-black">
-      <div className="h-96 relative overflow-hidden border border-black">
+    <div className="lg:basis-[22.5%] xs:basis-[70%] flex flex-col flex-shrink-0 border border-midBlue rounded-b-2xl">
+      <div className="h-96 relative overflow-hidden">
         <Image
           className="w-full h-full absolute z-20 object-cover"
           src={poster || '/default-poster.jpg'}
@@ -105,32 +105,32 @@ export const Card2 = ({ title, desc, poster, url }: CardProps) => {
           layout="fill"
           objectFit="cover"
         />
-        <Button className="absolute z-40 bottom-4 right-4 text-white">
-          {' '}
-          <FaExternalLinkAlt size={20} />{' '}
+        <Button buttonType='ghost' className="absolute z-40 bottom-4 right-4 text-white">
+          <FaExternalLinkAlt size={20} />
         </Button>
       </div>
-      <div className="p-2 flex flex-col gap-2">
-        <Typography variant="xl" color="secondary">
+      <div className="p-4 flex flex-col gap-2">
+        <Typography type='subtitle' weight='600' color="primary" uppercase>
           {truncateDesc({ text: title, wordLimit: 4 })}
         </Typography>
-        <Typography variant="sm" color="secondary">
+        <Typography type='caption' color="primary">
           {truncateDesc({ text: desc, wordLimit: 10 })}
         </Typography>
         <div className="flex gap-2">
           <Button
+            variant='primary'
             buttonType="outline"
             radius="lg"
-            className="px-3 py-1 text-[12px] font-semibold"
+            className="px-3 py-1 text-[12px] font-medium !border-midBlue"
             onClick={() =>
               window.open(TITLE, '_blank', 'noopener,noreferrer')
             }
           >
-            {t('reviewHere')}
+            {t('review')}
           </Button>
           <Button
             buttonType="ghost"
-            className="px-3 py-1 text-[12px] font-semibold"
+            className="px-3 py-1 text-[12px] font-semibold text-midBlue"
             onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
           >
             {t('imdb')}

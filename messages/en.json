@@ -29,6 +29,7 @@
   },
   "card": {
     "reviewHere": "My review here",
+    "review": "Review",
     "imdb": "IMDB",
     "name": "Name"
   },

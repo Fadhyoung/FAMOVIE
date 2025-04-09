@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       'flex gap-2 items-center justify-center font-medium focus:outline-none transition-all';
 
     const variantStyles = {
-      primary: 'bg-white border-darkBlue',
+      primary: 'bg-white border-darkBlue text-darkBlue',
       secondary: 'bg-midBlue border-amber text-white',
       tertiary: 'bg-darkBlue border-amber',
       accent: 'bg-amber border-midBlue',

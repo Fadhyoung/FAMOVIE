@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 export type TypographyProps = {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'muted' | 'highlight' | 'danger' | 'accent';
-  type: 'display' | 'massiveTitle' | 'title' | 'subtitle' | 'body' | 'caption' | 'button' | 'overline' | 'link';
+  type: 'display' | 'massiveTitle' | 'title' | 'cardtitle' | 'subtitle' | 'body' | 'caption' | 'button' | 'overline' | 'link';
   className?: string;
   children?: React.ReactNode;
   color?: 'primary' | 'secondary' | 'tertiary' | 'muted' | 'highlight' | 'danger' | 'accent';
@@ -12,6 +12,7 @@ export type TypographyProps = {
   visibleOn?: 'mobile-only' | 'desktop-only' | 'all';
   id?: string;
   italic?: boolean;
+  uppercase?: boolean;
 };
 
 const variantClasses: Record<NonNullable<TypographyProps['variant']>, string> = {
@@ -28,7 +29,8 @@ const typeClasses: Record<TypographyProps['type'], string> = {
   display: 'lg:text-6xl xs:text-4xl font-bold tracking-tighter leading-none',
   massiveTitle: 'lg:text-9xl xs:text-5xl font-bold tracking-tight leading-none',
   title: 'lg:text-3xl xs:text-xl font-semibold leading-snug',
-  subtitle: 'lg:text-xl xs:text-base font-medium leading-relaxed',
+  cardtitle: 'lg:text-2xl xs:text-xl font-semibold leading-snug',
+  subtitle: 'lg:text-lg xs:text-base font-medium leading-relaxed',
   body: 'lg:text-base xs:text-sm font-normal leading-relaxed',
   caption: 'lg:text-sm xs:text-xs leading-snug',
   button: 'lg:text-sm xs:text-xs uppercase tracking-wide font-semibold leading-none',
@@ -68,6 +70,7 @@ const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
       id,
       visibleOn = 'all',
       italic,
+      uppercase,
     },
     ref
   ) => {
@@ -81,7 +84,8 @@ const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
           color && colorClasses[color],
           visibleOnClasses[visibleOn],
           className,
-          italic ? 'italic' : ''
+          italic ? 'italic' : '',
+          uppercase ? 'uppercase': ''
         )}
         style={{ color, fontWeight: weight, ...styles }}
       >
