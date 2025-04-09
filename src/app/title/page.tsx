@@ -10,14 +10,14 @@ export default function Home() {
   const t = useTranslations('title');
   return (
     <main className="p-5 min-h-screen bg-white text-black">
-      {/* Secondary Navigation */}
+      {/* primary Navigation */}
       <div className="border-b border-zinc-800 px-4 py-2 flex flex-wrap items-center justify-between">
         <div className="flex items-center flex-wrap">
           <Link href="#" className="flex items-center mr-4 text-sm">
-            <Typography variant="lg" color="secondary">
+            <Typography type='subtitle' color="primary">
               {t('episodeGuide')}
             </Typography>
-            <Typography variant="lg" color="secondary" className="mx-2">
+            <Typography type='subtitle' color="primary" className="mx-2">
               {t('episodeCount', { count: 17 })}
             </Typography>
             <ChevronRight className="h-4 w-4" />
@@ -27,12 +27,12 @@ export default function Home() {
               (key, index) => (
                 <React.Fragment key={key}>
                   {index > 0 && (
-                    <Typography variant="lg" color="secondary">
+                    <Typography type='subtitle' color="primary">
                       ·
                     </Typography>
                   )}
                   <Link href="#" className="text-gray-300 hover:text-white">
-                    <Typography variant="lg" color="secondary">
+                    <Typography type='subtitle' color="primary">
                       {t(key)}
                     </Typography>
                   </Link>
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className="flex items-center mt-2 md:mt-0">
           <Link href="#" className="text-sm mr-4">
-            <Typography variant="lg" color="secondary">
+            <Typography type='subtitle' color="primary">
               {t('imdbPro')}
             </Typography>
           </Link>
@@ -62,7 +62,7 @@ export default function Home() {
                 d="M4 6h16M4 12h16M4 18h7"
               />
             </svg>
-            <Typography variant="lg" color="secondary">
+            <Typography type='subtitle' color="primary">
               {t('allTopics')}
             </Typography>
           </button>
@@ -78,9 +78,9 @@ export default function Home() {
         <div className="flex flex-wrap items-center justify-between mb-6">
           <div className="flex flex-col  items-start">
             <Typography
-              variant="4xl"
+              type='title'
               weight="800"
-              color="secondary"
+              color="primary"
               className="mb-2"
             >
               {t('title')}
@@ -91,14 +91,14 @@ export default function Home() {
                   <React.Fragment key={key}>
                     {index > 0 && (
                       <Typography
-                        variant="lg"
-                        color="secondary"
+                        type='subtitle'
+                        color="primary"
                         className="mr-2"
                       >
                         ·
                       </Typography>
                     )}
-                    <Typography variant="lg" color="secondary" className="mr-2">
+                    <Typography type='subtitle' color="primary" className="mr-2">
                       {t(
                         key,
                         key === 'yearRange'
@@ -116,28 +116,28 @@ export default function Home() {
 
           <div className="flex items-center space-x-8 mb-4 md:mb-0">
             <div>
-              <Typography variant="lg" color="secondary">
+              <Typography type='subtitle' color="primary">
                 {t('imdbRating')}
               </Typography>
               <div className="flex items-center">
                 <Star className="h-5 w-5 text-yellow-400 fill-yellow-400 mr-1" />
                 <Typography
-                  variant="lg"
-                  color="secondary"
+                  type='subtitle'
+                  color="primary"
                   className="font-bold"
                 >
                   8.6
                 </Typography>
                 <Typography
-                  variant="lg"
-                  color="secondary"
+                  type='subtitle'
+                  color="primary"
                   className="text-gray-400 text-sm"
                 >
                   /10
                 </Typography>
                 <Typography
-                  variant="lg"
-                  color="secondary"
+                  type='subtitle'
+                  color="primary"
                   className="text-gray-400 text-xs ml-1"
                 >
                   30K
@@ -145,14 +145,14 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <Typography variant="lg" color="secondary">
+              <Typography type='subtitle' color="primary">
                 {t('yourRating')}
               </Typography>
               <button className="flex items-center">
                 <Star className="h-5 w-5 text-blue-400 mr-1" />
                 <Typography
-                  variant="lg"
-                  color="secondary"
+                  type='subtitle'
+                  color="primary"
                   className="text-blue-400"
                 >
                   {t('rate')}
@@ -160,7 +160,7 @@ export default function Home() {
               </button>
             </div>
             <div>
-              <Typography variant="lg" color="secondary">
+              <Typography type='subtitle' color="primary">
                 {t('popularity')}
               </Typography>
               <div className="flex items-center">
@@ -177,8 +177,8 @@ export default function Home() {
                   />
                 </svg>
                 <Typography
-                  variant="lg"
-                  color="secondary"
+                  type='subtitle'
+                  color="primary"
                   className="font-bold"
                 >
                   5
@@ -202,12 +202,12 @@ export default function Home() {
               <div className="flex items-center bg-black/50 px-4 py-2 rounded-full">
                 <PlayCircle className="h-8 w-8 mr-2" />
                 <div>
-                  <Typography variant="lg" color="secondary">
+                  <Typography type='subtitle' color="primary">
                     {t('playTrailer')}
                   </Typography>
                   <Typography
-                    variant="lg"
-                    color="secondary"
+                    type='subtitle'
+                    color="primary"
                     className="text-gray-300"
                   >
                     2:08
@@ -253,7 +253,7 @@ export default function Home() {
                     }
                   />
                 </svg>
-                <Typography variant="lg" color="secondary">
+                <Typography type='subtitle' color="primary">
                   {key}
                 </Typography>
               </div>
@@ -288,7 +288,7 @@ export default function Home() {
         </div>
 
         {/* Synopsis */}
-        <Typography variant="lg" color="secondary" className="mb-6">
+        <Typography type='subtitle' color="primary" className="mb-6">
           {t('synopsis')}
         </Typography>
 
@@ -298,8 +298,8 @@ export default function Home() {
             <div className="flex justify-between items-center mb-2">
               <div className="flex">
                 <Typography
-                  variant="lg"
-                  color="secondary"
+                  type='subtitle'
+                  color="primary"
                   className="text-gray-400 mr-2"
                 >
                   {t(key)}
@@ -309,15 +309,15 @@ export default function Home() {
                     <React.Fragment key={name}>
                       {index > 0 && (
                         <Typography
-                          variant="lg"
-                          color="secondary"
+                          type='subtitle'
+                          color="primary"
                           className="text-gray-400 mr-2"
                         >
                           ·
                         </Typography>
                       )}
                       <Link href="#">
-                        <Typography variant="lg" color="link">
+                        <Typography type='subtitle' color="tertiary">
                           {name}
                         </Typography>
                       </Link>
@@ -340,7 +340,7 @@ export default function Home() {
               height={24}
               className="h-6 mr-2"
             />
-            <Typography variant="lg" color="secondary">
+            <Typography type='subtitle' color="primary">
               {t('imdbProInfo')}
             </Typography>
           </Link>
@@ -350,7 +350,7 @@ export default function Home() {
         <div className="mt-6 flex space-x-4">
           {['userReviews', 'criticReviews'].map((key) => (
             <div key={key}>
-              <Typography variant="lg" color="link" weight="800">
+              <Typography type='subtitle' color="tertiary" weight="800">
                 {t(
                   key === 'userReviews'
                     ? 'userReviewCount'
