@@ -1,0 +1,11 @@
+/* styles.css or inside a module CSS/SASS file */
+.anchor-left-section {
+  anchor-name: --left-section;
+}
+
+.anchor-to-left-section {
+  position-anchor: --left-section;
+  bottom: anchor(top);
+  left: anchor(right);
+  transform: translate(50%, 100%);
+}

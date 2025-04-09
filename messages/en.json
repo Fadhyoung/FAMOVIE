@@ -23,7 +23,9 @@
     "about": "About",
     "contact": "Contact",
     "loading": "Loading...",
-    "visitMyWebsite": "Visit my website"
+    "visitMyWebsite": "Visit my website",
+    "welcomeTo": "Welcome To",
+    "subjective": "Pure subjective here"
   },
   "card": {
     "reviewHere": "My review here",

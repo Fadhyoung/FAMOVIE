@@ -49,38 +49,38 @@ export const Card1 = ({ width, height, data }: CardProps) => {
         />
         <div className="basis-[60%] p-5 flex flex-col items-start justify-between">
           <div className="w-full flex justify-between items-center">
-            <div className="flex gap-2 items-start text-[20px] text-amber-300">
-              <Typography variant="2xl" color="secondary">
+            <div className="flex gap-2 items-center text-amber">
+              <Typography type='title' color="tertiary">
                 {data?.imdbRating}
               </Typography>
               <FaStar size={25} />
             </div>
             <Button onClick={() => window.open(data?.URL, '_blank')}>
-              <FaExternalLinkAlt size={25} />
+              <FaExternalLinkAlt size={25} className='text-midBlue' />
             </Button>
           </div>
 
           <div className="w-full flex flex-col">
             <Typography
-              variant="xl"
+              type='subtitle'
               weight="600"
               className="w-full"
-              color="secondary"
+              color="primary"
             >
               {data?.Title}
             </Typography>
             <Typography
-              variant="sm"
+              type='body'
               weight="400"
               className="w-full text-justify"
-              color="secondary"
+              color="primary"
             >
               {truncateDesc({ text: data?.Plot, wordLimit: 15 })}
             </Typography>
           </div>
 
           <Typography
-            variant="xs"
+            type='caption'
             color="tertiary"
             className="w-full flex flex-nowrap overflow-hidden"
           >

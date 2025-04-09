@@ -17,7 +17,7 @@ export interface ButtonProps
     | 'icon'
     | 'elevated';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger' | 'default';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'accent' | 'info' | 'success' | 'warning' | 'danger';
   radius?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
   isLoading?: boolean;
   loadingPosition?: 'left' | 'right';
@@ -48,26 +48,40 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      'inline-flex items-center justify-center font-medium focus:outline-none transition-all';
+      'flex gap-2 items-center justify-center font-medium focus:outline-none transition-all';
 
     const variantStyles = {
-      primary: 'bg-white text-black',
-      secondary: 'bg-primaryGreen text-white',
-      tertiary: 'bg-secondaryGreen',
-      quartiary: 'bg-tertiaryGreen',
-      danger: 'bg-red-600',
-      default: 'bg-gray-200',
+      primary: 'bg-white border-darkBlue',
+      secondary: 'bg-midBlue border-amber text-white',
+      tertiary: 'bg-darkBlue border-amber',
+      accent: 'bg-amber border-midBlue',
+      info: 'bg-sky-100 text-sky-700 border-sky-300',
+      success: 'bg-green-500 text-white border-green-700',
+      warning: 'bg-yellow-400 text-black border-yellow-600',
+      danger: 'bg-red-600 text-white border-red-800',
+    };
+
+    const contrastTextColors = {
+      primary: 'text-darkBlue',
+      secondary: 'text-white',
+      tertiary: 'text-white',
+      accent: 'text-darkBlue',
+      info: 'text-sky-700',
+      success: 'text-white',
+      warning: 'text-black',
+      danger: 'text-white',
+      default: 'text-black',   
     };
 
     const buttonTypeStyles = {
-      solid: `${variantStyles[variant]} text-black`,
-      outline: 'border border-black text-black',
-      subtle: `${variantStyles[variant]} bg-opacity-50`,
-      ghost: 'bg-transparent',
-      link: 'bg-transparent underline p-0',
-      icon: 'p-2 rounded-full',
-      elevated: `${variantStyles[variant]} lg:shadow-md hover:shadow-lg`,
-    };
+      solid: `${variantStyles[variant]} ${contrastTextColors[variant]}`,
+      outline: `${variantStyles[variant]} ${contrastTextColors[variant]} border text-black`,
+      subtle: `${variantStyles[variant]} bg-opacity-50 ${contrastTextColors[variant]}`,
+      ghost: `${contrastTextColors[variant]} bg-transparent`,
+      link: `${contrastTextColors[variant]} bg-transparent underline p-0 text-midBlue`,
+      icon: `p-2 rounded-full ${contrastTextColors[variant]}`,
+      elevated: `${variantStyles[variant]} ${contrastTextColors[variant]} lg:shadow-md hover:shadow-lg`,
+    };    
 
     const sizeStyles = {
       xs: 'px-2 py-1 text-xs',
