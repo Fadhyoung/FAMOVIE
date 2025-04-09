@@ -141,6 +141,48 @@ export const Card2 = ({ title, desc, poster, url }: CardProps) => {
   );
 };
 
+// Used at the top 10 recomendation
+export const ReviewCards = ({ title, desc, poster, url }: CardProps) => {
+  const t = useTranslations('card');
+  return (
+    <div className="flex flex-shrink-0 border border-midBlue rounded-b-2xl">
+      <div className="w-32 h-full relative overflow-hidden">
+        <Image
+          className="w-full h-full object-cover"
+          src={poster || '/default-poster.jpg'}
+          alt={title || 'Poster'}
+          layout="fill"
+          objectFit="cover"
+        />
+        <Button buttonType='ghost' className="absolute z-40 bottom-4 right-4 text-white">
+          <FaExternalLinkAlt size={20} />
+        </Button>
+      </div>
+      <div className="p-4 flex flex-col gap-2">
+        <Typography type='title' weight='600' color="primary">
+          {truncateDesc({ text: title, wordLimit: 4 })}
+        </Typography>
+        <Typography type='body' color="primary">
+          {truncateDesc({ text: desc, wordLimit: 10 })}
+        </Typography>
+        <div className="flex gap-2">
+          <Button
+            variant='primary'
+            buttonType="outline"
+            radius="lg"
+            className="px-3 py-1 text-[12px] font-medium !border-midBlue"
+            onClick={() =>
+              window.open(TITLE, '_blank', 'noopener,noreferrer')
+            }
+          >
+            {t('review')}
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Used at actor and ph
 export const Card3 = ({}) => {
   const t = useTranslations('card');
@@ -156,7 +198,7 @@ export const Card3 = ({}) => {
 export const Card4 = ({ title, desc, poster }: CardProps) => {
   const t = useTranslations('card');
   return (
-    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[400px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
+    <div className="lg:basis-[23.5%] xs:basis-[45%] h-[450px] m-2 flex-shrink-0 relative flex flex-col items-end rounded-[10px] overflow-hidden bg-red-500">
       <Image
         className="w-full h-full absolute z-10 object-cover"
         src={poster || '/default-poster.jpg'}
@@ -165,18 +207,18 @@ export const Card4 = ({ title, desc, poster }: CardProps) => {
         objectFit="cover"
       />
       <div className="w-full h-3/4 absolute bottom-0 z-20 bg-gradient-to-t from-black to-transparent"></div>
-      <div className="w-full p-3 absolute bottom-0 z-30 flex flex-col gap-1">
-        <Typography variant="lg" weight="600" color="primary">
+      <div className="w-full p-3 absolute bottom-0 z-30 flex flex-col gap-2">
+        <Typography type='subtitle' weight='1000' color="secondary" uppercase>
           {title}
         </Typography>
-        <Typography variant="sm" weight="400" color="primary">
-          {truncateDesc({ text: desc, wordLimit: 10 })}
+        <Typography type='caption' color="secondary">
+          {truncateDesc({ text: desc, wordLimit: 12 })}
         </Typography>
         <Button
           buttonType="solid"
-          variant="primary"
+          variant="secondary"
           radius="lg"
-          className="flex gap-4"
+          className="flex justify-between gap-4"
         >
           {t('reviewHere')} <FaExternalLinkAlt />{' '}
         </Button>

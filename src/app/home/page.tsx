@@ -2,6 +2,7 @@ import LandingPage from '@/app/home/components/landingPage';
 import Top10 from '@/app/home/components/top10';
 import Best3 from '@/app/home/components/best3';
 import AllData from '@/app/home/components/allData';
+import ReviewSection from '@/app/home/components/reviewSection';
 import Link from 'next/link';
 
 export default function HomeComponent() {
@@ -17,6 +18,8 @@ export default function HomeComponent() {
           {/* LEFT SIDE */}
           <div className="w-2/3 flex flex-col gap-10 items-center ">
             <Top10 />
+
+            <ReviewSection />
 
             <AllData />
           </div>

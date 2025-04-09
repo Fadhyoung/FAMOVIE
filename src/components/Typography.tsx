@@ -39,7 +39,7 @@ const typeClasses: Record<TypographyProps['type'], string> = {
 };
 
 const colorClasses: Record<NonNullable<TypographyProps['color']>, string> = {
-  primary: 'text-black',
+  primary: 'text-darkBlue',
   secondary: 'text-white',
   tertiary: 'text-midBlue',
   muted: 'text-gray-400 italic',
